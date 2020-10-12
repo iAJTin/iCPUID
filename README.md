@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/iAJTin/iCPUID/blob/v1.0.1/nuget/iCPUID.png" height="32">
+  <img src="https://github.com/iAJTin/iCPUID/blob/master/nuget/iCPUID.png" height="32">
 </p>
 <p align="center">
   <a href="https://github.com/iAJTin/iCPUID">
