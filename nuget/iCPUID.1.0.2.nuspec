@@ -14,7 +14,7 @@
     <description>iCPUID is a lightweight implementation that allows us to obtain CPUID information</description>
     <copyright>Copyright © 2019 iAJTin</copyright>
     <tags>CPUID CPU hardware iTin</tags>
-    <repository type="git" url="https://github.com/iAJTin/iCPUID" commit="2f2e4b7b9acc487f2bdc134ccb1c37de04b601d4" />
+    <repository type="git" url="https://github.com/iAJTin/iCPUID" commit="c199312de78c8dd59e49c95cfbe41774644155ee" />
     <dependencies>
       <group targetFramework="net461">
       </group>
