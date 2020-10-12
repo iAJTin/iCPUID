@@ -18,13 +18,13 @@ This file contains
 - **Structures**
 
 |Name|Description|
-|:------|:------|:----------|
+|:------|:----------|
 |CpuidResult| Public structure that contains the definition of the cpu registers |
 
 - **Methods**
 
 |Signature|Description|
-|:------|:------|:----------|
+|:------|:----------|
 |cpuid(leaf: u32) -> CpuidResult| Returns the result of the `cpuid` instruction for a given `leaf` |
 |cpuid_with_subleaf(leaf: u32, subleaf: u32) -> CpuidResult| Returns the result of the `cpuid` instruction for a given `leaf` and `sub leaf` |
 |cpuid_is_supported() -> bool| Returns a `bool` value that indicates whether the `cpuid` instruction is available for this system |
