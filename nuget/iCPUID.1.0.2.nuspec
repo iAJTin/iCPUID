@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>iCPUID</id>
+    <version>1.0.2</version>
+    <title>iCPUID</title>
+    <authors>iAJTin</authors>
+    <owners>iAJTin</owners>
+    <license type="expression">MIT</license>
+    <icon>.\iCPUID.png</icon>
+    <projectUrl>https://github.com/iAJTin/iCPUID</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/iAJTin/iCPUID/master/nuget/iCPUID.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>iCPUID is a lightweight implementation that allows us to obtain CPUID information</description>
+    <copyright>Copyright © 2019 iAJTin</copyright>
+    <tags>CPUID CPU hardware iTin</tags>
+    <repository type="git" url="https://github.com/iAJTin/iCPUID" commit="2f2e4b7b9acc487f2bdc134ccb1c37de04b601d4" />
+    <dependencies>
+      <group targetFramework="net461">
+      </group>
+      <group targetFramework="netstandard2.0">
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\iCPUID.png" target="." />
+    <file src="..\README.txt" target="." />  
+    <file src="..\references\cpuid\cpuid_0_1_0\**" target="runtimes\" />
+    <file src="..\src\lib\net\iTin.Hardware\iTin.Hardware.Specification\iTin.Hardware.Specification.Cpuid\bin\Release\**" target="lib" exclude="**\*.deps.json;**\*.pdb;" />
+    <file src=".\build\net461\iCPUID.targets" target="build\net461\iCPUID.targets" />
+    <file src=".\build\netstandard\iCPUID.targets" target="build\netstandard\iCPUID.targets" />
+  </files>
+</package>
+
+<!-- <file src="..\src\install.ps1" target="tools\" /> -->
+<!-- <file src="..\src\uninstall.ps1" target="tools\" /> -->
+<!-- <file src="..\src/iCPUID.Native.targets" target="build/netcoreapp3.1" /> -->
+<!-- <file src="..\references\cpuid\cpuid_0_1_0\release\**" target="linked\cpuid\cpuid_0_1_0\" /> -->

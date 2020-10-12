@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>iTin.Hardware.Specification.Cpuid</AssemblyName>
+    <PackageId>iTin.Hardware.Specification.Cpuid</PackageId>
+    <Version>1.0.0.0</Version>
+    <Authors>iTin</Authors>
+    <Company>iTin</Company>
+    <Product>iTin.Hardware.Specification.Cpuid</Product>
+    <Description>iCPUID is a lightweight implementation that allows us to obtain CPUID information</Description>
+    <Copyright>Copyright © 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\iTin.Core.Hardware.Common.csproj" />
+    <ProjectReference Include="..\..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.CrossPlatform\iTin.Core.Hardware.CrossPlatform.Cpuid\iTin.Core.Hardware.CrossPlatform.Cpuid.csproj" />
+    <ProjectReference Include="..\..\..\iTin.Core\iTin.Core\iTin.Core.csproj" />
+  </ItemGroup>
+
+  <!--
+  
+  <ItemGroup>
+    <Content Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-64\cpuid.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackagePath>lib\$(TargetFramework)</PackagePath>
+    </Content>
+  </ItemGroup>
+  
+  -->
+  
+  <Target Name="CopyCpuid_win" AfterTargets="Build">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-64\native\cpuid.*" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyCpuid_osx" AfterTargets="Build">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\osx-x64\native\libcpuid.dylib" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyCpuid_linux" AfterTargets="Build">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\linux-x64\native\libcpuid.so" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+  
+
+</Project>

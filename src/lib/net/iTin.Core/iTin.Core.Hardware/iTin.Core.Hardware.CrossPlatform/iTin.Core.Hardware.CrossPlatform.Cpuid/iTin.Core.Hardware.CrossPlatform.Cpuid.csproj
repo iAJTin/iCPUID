@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>iTin.Core.Hardware.CrossPlatform.Cpuid</AssemblyName>
+    <PackageId>iTin.Core.Hardware.CrossPlatform.Cpuid</PackageId>
+    <Version>1.0.0.0</Version>
+    <Authors>iTin</Authors>
+    <Company>iTin</Company>
+    <Product>iTin.Core.Hardware.CrossPlatform.Cpuid</Product>
+    <Description>Cross-Platform Generic Hardware Calls (CPUID)</Description>
+    <Copyright>Copyright © 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\iTin.Core.Interop\iTin.Core.Interop.CrossPlatform\iTin.Core.Interop.CrossPlatform.Cpuid.csproj" />
+  </ItemGroup>
+
+  <Target Name="CopyCpuid_win" AfterTargets="Build" Condition=" '$(OS)' == 'Windows_NT' ">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-x64\cpuid.*" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyCpuid_osx" AfterTargets="Build" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))'">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\osx-x64\libcpuid.dylib" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyCpuid_linux" AfterTargets="Build" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\linux-x64\libcpuid.so" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

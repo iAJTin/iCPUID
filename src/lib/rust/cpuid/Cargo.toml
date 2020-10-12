@@ -1,0 +1,12 @@
+[package]
+name = "cpuid"
+version = "0.1.0"
+authors = ["fernandogarciavega"]
+edition = "2018"
+
+[lib]
+name="cpuid"
+crate-type = ["dylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
