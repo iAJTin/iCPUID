@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>iTin.Hardware.Specification.Cpuid</AssemblyName>
     <PackageId>iTin.Hardware.Specification.Cpuid</PackageId>
-    <Version>1.0.0.0</Version>
+    <Version>1.0.0.1</Version>
     <Authors>iTin</Authors>
     <Company>iTin</Company>
     <Product>iTin.Hardware.Specification.Cpuid</Product>
@@ -41,7 +41,7 @@
   
   <Target Name="CopyCpuid_win" AfterTargets="Build">
     <ItemGroup>
-      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-64\native\cpuid.*" />
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-x64\native\cpuid.*" />
     </ItemGroup>
 
     <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
