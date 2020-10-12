@@ -2,7 +2,7 @@
 What is iCPUID?
 ================
 
-iCPUID is a lightweight implementation that allows us to obtain the CPUID information.
+iCPUID is a lightweight cross-platform implementation that allows us to obtain the CPUID information. Works on Windows, Mac and Linux
 
 
 v1.0.2
