@@ -31,8 +31,3 @@
     <file src=".\build\netstandard\iCPUID.targets" target="build\netstandard\iCPUID.targets" />
   </files>
 </package>
-
-<!-- <file src="..\src\install.ps1" target="tools\" /> -->
-<!-- <file src="..\src\uninstall.ps1" target="tools\" /> -->
-<!-- <file src="..\src/iCPUID.Native.targets" target="build/netcoreapp3.1" /> -->
-<!-- <file src="..\references\cpuid\cpuid_0_1_0\release\**" target="linked\cpuid\cpuid_0_1_0\" /> -->

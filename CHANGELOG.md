@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
   
+ - Adds support for Linux and Mac
+ 
  - Library versions for this version
   
 |Library|Version|Description|
