@@ -3195,7 +3195,7 @@ namespace iTin.Hardware.Specification.Cpuid
         }
         #endregion
 
-        #region [public] {static} (class) ProcessorSerialNumber: Contains the key definitions available for a leaf 0000000A [Architectural Performance Monitoring Features]
+        #region [public] {static} (class) ArchitecturalPerformanceMonitoringFeatures: Contains the key definitions available for a leaf 0000000A [Architectural Performance Monitoring Features]
         /// <summary>
         /// Contains the key definitions available for a leaf 0000000A [<see cref="Leaf.ArchitecturalPerformanceMonitoringFeatures"/> Information].
         /// </summary>
