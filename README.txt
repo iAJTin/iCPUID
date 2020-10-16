@@ -13,6 +13,8 @@ Changes in this version (v1.0.3)
 
     - Library documentation.
 
+    - tools folder in solution root. Contains a script for update help md files.
+
 · Changed
   -------
 
