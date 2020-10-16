@@ -5,73 +5,112 @@ What is iCPUID?
 iCPUID is a lightweight cross-platform implementation that allows us to obtain the CPUID information. Works on Windows, Mac and Linux
 
 
+Changes in this version (v1.0.3)
+================================
+
+� Added
+  -----
+
+    - Library documentation.
+
+� Changed
+  -------
+
+    - Update result classes for support more scenaries.
+
+    - Library versions for this version
+
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | Library                                    Version        Description                                                           |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Core                                  2.0.0.2	    Base library containing various extensions, helpers, common constants |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Core.Hardware.Common                  1.0.0.1        Common Hardware Infrastructure                                        |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Core.Hardware.CrossPlatform.Cpuid     1.0.0.0        Cross-Platform Generic Hardware Calls (CPUID)                         |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Core.Interop.CrossPlatform.Cpuid      1.0.0.0        Generic Cross-Platform Interop Calls (CPUID)                          |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Core.Interop.Shared                   1.0.0.0        Generic Shared Interop Definitions, Data Structures, Constants...     |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Hardware.Specification.Cpuid          1.0.0.1		CPUID Specification Implementation                                    |
+    -----------------------------------------------------------------------------------------------------------------------------------
+    | iTin.Logging                               1.0.0.0        Logging library                                                       |
+    -----------------------------------------------------------------------------------------------------------------------------------
+
 v1.0.2
 ======
 
-Added
----------------------------------------------------------------------------------------------------------------------------------
-| Library                                   Version       Description                                                           |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core                                  2.0.0.1       Base library containing various extensions, helpers, common constants |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Hardware.Common                  1.0.0.1       Common Hardware Infrastructure                                        |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Hardware.CrossPlatform.Cpuid     1.0.0.0       Cross-Platform Generic Hardware Calls (CPUID)                         |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Interop.CrossPlatform.Cpuid      1.0.0.0       Generic Cross-Platform Interop Calls (CPUID)                          |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Interop.Shared                   1.0.0.0       Generic Shared Interop Definitions, Data Structures, Constants...     |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Hardware.Specification.Cpuid          1.0.0.1		  CPUID Specification Implementation                                    |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Logging                               1.0.0.0       Logging library                                                       |
----------------------------------------------------------------------------------------------------------------------------------
+� Added
+  -----
 
-Removed
----------------------------------------------------------------------------------------------------------------------------------
-| Library                                   Version       Description                                                           |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Hardware.CrossPlatform           1.0.0.0       Hardware Cross-Platform Interop Calls                                 |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Interop.CrossPlatform            1.0.0.0       Generic Cross-Platform Interop Calls                                  |
----------------------------------------------------------------------------------------------------------------------------------
+    - Library documentation.
+
+    ---------------------------------------------------------------------------------------------------------------------------------
+    | Library                                   Version       Description                                                           |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core                                  2.0.0.1       Base library containing various extensions, helpers, common constants |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.Common                  1.0.0.1       Common Hardware Infrastructure                                        |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.CrossPlatform.Cpuid     1.0.0.0       Cross-Platform Generic Hardware Calls (CPUID)                         |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Interop.CrossPlatform.Cpuid      1.0.0.0       Generic Cross-Platform Interop Calls (CPUID)                          |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Interop.Shared                   1.0.0.0       Generic Shared Interop Definitions, Data Structures, Constants...     |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Hardware.Specification.Cpuid          1.0.0.1		  CPUID Specification Implementation                                    |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Logging                               1.0.0.0       Logging library                                                       |
+    ---------------------------------------------------------------------------------------------------------------------------------
+
+� Removed
+  -------
+
+    ---------------------------------------------------------------------------------------------------------------------------------
+    | Library                                   Version       Description                                                           |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.CrossPlatform           1.0.0.0       Hardware Cross-Platform Interop Calls                                 |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Interop.CrossPlatform            1.0.0.0       Generic Cross-Platform Interop Calls                                  |
+    ---------------------------------------------------------------------------------------------------------------------------------
 
 
 v1.0.1
 ======
 
-Library versions
----------------------------------------------------------------------------------------------------------------------------------
-| Library                                   Version       Description                                                           |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core                                  2.0.0.0       Base library containing various extensions, helpers, common constants |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Hardware.Common                  1.0.0.0       Common Hardware Infrastructure                                        |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Hardware.CrossPlatform           1.0.0.0       Hardware Cross-Platform Interop Calls                                 |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Core.Interop.CrossPlatform            1.0.0.0       Generic Cross-Platform Interop Calls                                  |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Hardware.Specification.Cpuid          1.0.0.0		  CPUID Specification Implementation                                    |
----------------------------------------------------------------------------------------------------------------------------------
-|iTin.Logging                               1.0.0.0       Logging library                                                       |
----------------------------------------------------------------------------------------------------------------------------------
+    Library versions
+    ---------------------------------------------------------------------------------------------------------------------------------
+    | Library                                   Version       Description                                                           |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core                                  2.0.0.0       Base library containing various extensions, helpers, common constants |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.Common                  1.0.0.0       Common Hardware Infrastructure                                        |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.CrossPlatform           1.0.0.0       Hardware Cross-Platform Interop Calls                                 |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Interop.CrossPlatform            1.0.0.0       Generic Cross-Platform Interop Calls                                  |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Hardware.Specification.Cpuid          1.0.0.0		  CPUID Specification Implementation                                    |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Logging                               1.0.0.0       Logging library                                                       |
+    ---------------------------------------------------------------------------------------------------------------------------------
 
 
-Native library versions
-=======================
+    Native library versions
+    =======================
 
----------------------------------------------------------------------------------------------------------------------------------
-| Library                                   Version       Description                                                           |
----------------------------------------------------------------------------------------------------------------------------------
-|cpuid                                      0.0.1.0       Native calls (CPUID instruction calls)                                |
----------------------------------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------------------------------
+    | Library                                   Version       Description                                                           |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |cpuid                                      0.0.1.0       Native calls (CPUID instruction calls)                                |
+    ---------------------------------------------------------------------------------------------------------------------------------
 
-The code of the native cpuid library, is available in the github repository at the following link: 
-https://github.com/iAJTin/iCPUID/tree/master/src/lib/rust/cpuid
+    The code of the native cpuid library, is available in the github repository at the following link: 
+    https://github.com/iAJTin/iCPUID/tree/master/src/lib/rust/cpuid
 
-The code is developed in the Rust language, to know how to install, edit and use this code please see the cpuid.md file in the following link
-https://github.com/iAJTin/iCPUID/blob/master/src/lib/rust/cpuid.md
+    The code is developed in the Rust language, to know how to install, edit and use this code please see the cpuid.md file in the following link
+    https://github.com/iAJTin/iCPUID/blob/master/src/lib/rust/cpuid.md
 
 
 Install via NuGet
@@ -244,3 +283,8 @@ Examples
             }
         }
     }
+
+Documentation
+==============
+
+ - For full code documentation, please see next link https://github.com/iAJTin/iCPUID/blob/master/documentation/iTin.Hardware.Specification.Cpuid.md.
