@@ -8,18 +8,19 @@ iCPUID is a lightweight cross-platform implementation that allows us to obtain t
 Changes in this version (v1.0.3)
 ================================
 
-· Added
+Â· Added
   -----
 
     - Library documentation.
 
     - tools folder in solution root. Contains a script for update help md files.
 
-· Changed
+Â· Changed
   -------
+  
     - Changed IResultGeneric interface. Changed Value property name by Result (for code clarify).
 
-      · This change may have implications in your final code, it is resolved by changing Value to Result
+      Â· This change may have implications in your final code, it is resolved by changing Value to Result
 
     - Update result classes for support more scenaries.
 
@@ -46,7 +47,7 @@ Changes in this version (v1.0.3)
 v1.0.2
 ======
 
-· Added
+Â· Added
   -----
 
     - Library documentation.
@@ -69,7 +70,7 @@ v1.0.2
     |iTin.Logging                               1.0.0.0       Logging library                                                       |
     ---------------------------------------------------------------------------------------------------------------------------------
 
-· Removed
+Â· Removed
   -------
 
     ---------------------------------------------------------------------------------------------------------------------------------
