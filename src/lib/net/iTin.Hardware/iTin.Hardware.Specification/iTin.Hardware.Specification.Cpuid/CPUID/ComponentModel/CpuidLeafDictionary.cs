@@ -77,7 +77,7 @@ namespace iTin.Hardware.Specification.Cpuid
             int i = 0;
             foreach (var subLeaf in subLeafs)
             {
-                properties.Add((SubLeaf)i, subLeaf.GetProperty(propertyKey).Value);
+                properties.Add((SubLeaf)i, subLeaf.GetProperty(propertyKey).Result);
                 i++;
             }
 

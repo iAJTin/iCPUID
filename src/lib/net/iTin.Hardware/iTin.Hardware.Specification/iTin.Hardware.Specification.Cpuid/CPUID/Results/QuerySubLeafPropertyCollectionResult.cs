@@ -26,12 +26,12 @@ namespace iTin.Hardware.Specification.Cpuid
         /// Returns a new <see cref="QuerySubLeafPropertyCollectionResult"/> with specified detailed error.
         /// </summary>
         /// <param name="message">Error message</param>
-        /// <param name="value">Result value</param>
+        /// <param name="Result">Result Result</param>
         /// <param name="code">Error code</param>
         /// <returns>
         /// A new invalid <see cref="QuerySubLeafPropertyCollectionResult"/> with specified detailed error.
         /// </returns>
-        public new static QuerySubLeafPropertyCollectionResult CreateErroResult(string message, CpuidSubLeafDictionary value, string code = "") => CreateErroResult(new IResultError[] { new ResultError { Code = code, Message = message } }, value);
+        public new static QuerySubLeafPropertyCollectionResult CreateErroResult(string message, CpuidSubLeafDictionary Result, string code = "") => CreateErroResult(new IResultError[] { new ResultError { Code = code, Message = message } }, Result);
 
         /// <summary>
         /// Returns a new <see cref="QuerySubLeafPropertyCollectionResult"/> with specified detailed errors collection.
@@ -43,7 +43,7 @@ namespace iTin.Hardware.Specification.Cpuid
         public new static QuerySubLeafPropertyCollectionResult CreateErroResult(IResultError[] errors) =>
             new QuerySubLeafPropertyCollectionResult
             {
-                Value = default,
+                Result = default,
                 Success = false,
                 Errors = (IResultError[])errors.Clone()
             };
@@ -52,14 +52,14 @@ namespace iTin.Hardware.Specification.Cpuid
         /// Returns a new <see cref="QuerySubLeafPropertyCollectionResult"/> with specified detailed errors collection.
         /// </summary>
         /// <param name="errors">A errors collection</param>
-        /// <param name="value">Result value</param>
+        /// <param name="Result">Result Result</param>
         /// <returns>
         /// A new invalid <see cref="QuerySubLeafPropertyCollectionResult"/> with specified detailed errors collection.
         /// </returns>
-        public new static QuerySubLeafPropertyCollectionResult CreateErroResult(IResultError[] errors, CpuidSubLeafDictionary value) =>
+        public new static QuerySubLeafPropertyCollectionResult CreateErroResult(IResultError[] errors, CpuidSubLeafDictionary Result) =>
             new QuerySubLeafPropertyCollectionResult
             {
-                Value = value,
+                Result = Result,
                 Success = false,
                 Errors = (IResultError[])errors.Clone()
             };
@@ -67,14 +67,14 @@ namespace iTin.Hardware.Specification.Cpuid
         /// <summary>
         /// Returns a new success result.
         /// </summary>
-        /// <param name="value">Result value</param>
+        /// <param name="Result">Result Result</param>
         /// <returns>
         /// A new valid <see cref="QuerySubLeafPropertyCollectionResult"/>.
         /// </returns>
-        public new static QuerySubLeafPropertyCollectionResult CreateSuccessResult(CpuidSubLeafDictionary value) =>
+        public new static QuerySubLeafPropertyCollectionResult CreateSuccessResult(CpuidSubLeafDictionary Result) =>
             new QuerySubLeafPropertyCollectionResult
             {
-                Value = value,
+                Result = Result,
                 Success = true,
                 Errors = new List<IResultError>()
             };
@@ -92,14 +92,14 @@ namespace iTin.Hardware.Specification.Cpuid
         /// Creates a new <see cref="QuerySubLeafPropertyCollectionResult"/> instance from known exception.
         /// </summary>
         /// <param name="exception">Target exception.</param>
-        /// <param name="value">Result value</param>
+        /// <param name="Result">Result Result</param>
         /// <returns>
         /// A new <see cref="QuerySubLeafPropertyCollectionResult"/> instance for specified exception.
         /// </returns>
-        public new static QuerySubLeafPropertyCollectionResult FromException(System.Exception exception, CpuidSubLeafDictionary value) =>
+        public new static QuerySubLeafPropertyCollectionResult FromException(System.Exception exception, CpuidSubLeafDictionary Result) =>
             new QuerySubLeafPropertyCollectionResult
             {
-                Value = value,
+                Result = Result,
                 Success = false,
                 Errors = new List<IResultError> { new ResultExceptionError { Exception = exception } }
             };

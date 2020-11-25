@@ -88,7 +88,7 @@ namespace iCPUID.ConsoleApp
                     foreach (var property in properties)
                     {
                         QueryPropertyResult queryResult = subLeaf.GetProperty(property);
-                        PropertyItem propertyItem = queryResult.Value;
+                        PropertyItem propertyItem = queryResult.Result;
                         object value = propertyItem.Value;
                         string friendlyName = property.GetPropertyName();
                         PropertyUnit valueUnit = property.PropertyUnit;
@@ -150,13 +150,13 @@ namespace iCPUID.ConsoleApp
             QueryPropertyResult manufacturerQueryResult = cpuid.Leafs.GetProperty(LeafProperty.BasicInformation.Manufacturer);
             if (manufacturerQueryResult.Success)
             {
-                Console.WriteLine($@" > Manufacturer: {manufacturerQueryResult.Value.Value}");
+                Console.WriteLine($@" > Manufacturer: {manufacturerQueryResult.Result.Value}");
             }
 
             QueryPropertyResult avx2 = cpuid.Leafs.GetProperty(LeafProperty.ExtendedFeatures.AVX2);
             if (avx2.Success)
             {
-                Console.WriteLine($@" > AVX2: {avx2.Value.Value}");
+                Console.WriteLine($@" > AVX2: {avx2.Result.Value}");
             }
 
             Console.WriteLine();
@@ -166,7 +166,7 @@ namespace iCPUID.ConsoleApp
             QuerySubLeafPropertyCollectionResult cacheSizesQueryResult = leafs.GetProperties(LeafProperty.DeterministicCacheParameters.CacheSize);
             if (cacheSizesQueryResult.Success)
             {
-                CpuidSubLeafDictionary cacheSizes = cacheSizesQueryResult.Value;
+                CpuidSubLeafDictionary cacheSizes = cacheSizesQueryResult.Result;
                 bool hasCacheSizesEntries = cacheSizes.Any();
                 if (!hasCacheSizesEntries)
                 {
