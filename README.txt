@@ -11,6 +11,8 @@ Changes in this version (v1.0.3)
 · Added
   -----
 
+    - Adds LeafProperty.ProcessorInfoAndFeatures.Features.HYPERVISOR property. Thanks to @li-zhixin.
+
     - Library documentation.
 
     - tools folder in solution root. Contains a script for update help md files.

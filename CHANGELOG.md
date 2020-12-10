@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+ - Adds **LeafProperty.ProcessorInfoAndFeatures.Features.HYPERVISOR** property. Thanks to [@li-zhixin](https://github.com/li-zhixin).
+ 
  - Library documentation.
  
  - ```tools``` folder in solution root. Contains a script for update help md files.
