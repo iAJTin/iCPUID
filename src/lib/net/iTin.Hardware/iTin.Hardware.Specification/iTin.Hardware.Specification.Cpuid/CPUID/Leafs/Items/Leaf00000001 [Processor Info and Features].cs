@@ -156,7 +156,7 @@ namespace iTin.Hardware.Specification.Cpuid
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits AVX = Bits.Bit28;          // 30 - IA AVX
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits F16C = Bits.Bit29;         // 29 - A value of 1 indicates that processor supports 16-bit floating-point conversion instructions
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits RDRAND = Bits.Bit30;       // 30 - RDRAND instruction supported
-        // 31 - Not used. Always returns 0
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits HYPERVISOR = Bits.Bit31;   // 31 - Hypervisor present (always zero on physical CPUs)
         #endregion
 
         #region register EDX definition
@@ -181,7 +181,7 @@ namespace iTin.Hardware.Specification.Cpuid
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits PSN = Bits.Bit18;    // 18 - Processor Serial Number
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits CLFSH = Bits.Bit19;  // 19 - CFLUSH instruction
         // 20 - Reserved
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits DS = Bits.Bit21;   // 21 - Debug Trace Store
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits DS = Bits.Bit21;     // 21 - Debug Trace Store
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits ACPI = Bits.Bit22;   // 22 - Thermal Monitor and Software Controlled Clock Facilities
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits MMX = Bits.Bit23;    // 23 - MMX extensions
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits FXSR = Bits.Bit24;   // 24 - FXSAVE and FXRSTOR instructions
@@ -314,6 +314,7 @@ namespace iTin.Hardware.Specification.Cpuid
             properties.Add(LeafProperty.ProcessorInfoAndFeatures.Features.AVX, InvokeResult.ecx.CheckBit(AVX));
             properties.Add(LeafProperty.ProcessorInfoAndFeatures.Features.F16C, InvokeResult.ecx.CheckBit(F16C));
             properties.Add(LeafProperty.ProcessorInfoAndFeatures.Features.RDRAND, InvokeResult.ecx.CheckBit(RDRAND));
+            properties.Add(LeafProperty.ProcessorInfoAndFeatures.Features.HYPERVISOR, InvokeResult.ecx.CheckBit(HYPERVISOR));
 
             #endregion
 

@@ -869,6 +869,29 @@ namespace iTin.Hardware.Specification.Cpuid
                 public static IPropertyKey RDRAND => new PropertyKey(Leaf.ProcessorInfoAndFeatures, Leaf00000001Property.RDRAND);
                 #endregion
 
+                #region [public] {static} (IPropertyKey) HYPERVISOR: Gets a value representing the key to retrieve the property value
+                /// <summary>
+                /// <para>Gets a value representing the key to retrieve the property value.</para>
+                /// <para>
+                /// Hypervisor present.<br/>
+                /// Guest operating systems can test this property to detect if they are running inside a virtual machine.<br/>
+                /// </para>
+                /// <para>
+                ///  <para><b>Key Composition</b></para>
+                ///  <list type="bullet">
+                ///   <item><description>Leaf: <see cref="Leaf.ProcessorInfoAndFeatures"/></description></item>
+                ///   <item><description>Property: <see cref="Leaf00000001Property.HYPERVISOR"/></description></item>
+                ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+                ///  </list>
+                /// </para>
+                /// <para>
+                ///  <para><b>Return Value</b></para>
+                ///  <para>Type: <see cref="bool"/></para>
+                /// </para>
+                /// </summary>
+                public static IPropertyKey HYPERVISOR => new PropertyKey(Leaf.ProcessorInfoAndFeatures, Leaf00000001Property.HYPERVISOR);
+                #endregion
+
                 #endregion
 
                 #region edx register

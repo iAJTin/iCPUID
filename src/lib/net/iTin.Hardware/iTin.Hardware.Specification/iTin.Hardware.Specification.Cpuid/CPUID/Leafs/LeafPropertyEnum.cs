@@ -208,6 +208,11 @@ namespace iTin.Hardware.Specification.Cpuid
         [PropertyDescription("On-chip random number generator feature")]
         [PropertyType(typeof(bool))]
         RDRAND,
+
+        [PropertyName("HYPERVISOR")]
+        [PropertyDescription("Hypervisor present")]
+        [PropertyType(typeof(bool))]
+        HYPERVISOR,
         #endregion
 
         #region edx register
