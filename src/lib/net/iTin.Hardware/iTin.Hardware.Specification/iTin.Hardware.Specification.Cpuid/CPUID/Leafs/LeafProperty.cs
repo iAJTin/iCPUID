@@ -2512,6 +2512,8 @@ namespace iTin.Hardware.Specification.Cpuid
         /// </summary>
         public static class ExtendedFeatures
         {
+            #region SubLeaf: Main
+
             #region ebx register
 
             #region [public] {static} (IPropertyKey) FSGSBASE: Gets a value representing the key to retrieve the property value
@@ -2880,6 +2882,52 @@ namespace iTin.Hardware.Specification.Cpuid
             public static IPropertyKey RDT_A => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.RDT_A);
             #endregion
 
+            #region [public] {static} (IPropertyKey) AVX512_F: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_F.<br/>
+            /// AVX-512 Foundation.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_F"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_F => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_F);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_DQ: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_DQ.<br/>
+            /// AVX-512 Doubleword and Quadword Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_DQ"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_DQ => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_DQ);
+            #endregion
+
             #region [public] {static} (IPropertyKey) RDSEED: Gets a value representing the key to retrieve the property value
             /// <summary>
             /// <para>Gets a value representing the key to retrieve the property value.</para>
@@ -2947,6 +2995,52 @@ namespace iTin.Hardware.Specification.Cpuid
             /// </para>
             /// </summary>
             public static IPropertyKey SMAP => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.SMAP);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_IFMA: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_IFMA.<br/>
+            /// AVX-512 Integer Fused Multiply-Add Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_IFMA"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_IFMA => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_IFMA);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) PCOMMIT: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// PCOMMIT.<br/>
+            /// PCOMMIT instruction.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.PCOMMIT"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey PCOMMIT => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.PCOMMIT);
             #endregion
 
             #region [public] {static} (IPropertyKey) CLFLUSHOPT: Gets a value representing the key to retrieve the property value
@@ -3018,6 +3112,75 @@ namespace iTin.Hardware.Specification.Cpuid
             public static IPropertyKey IPT => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.IPT);
             #endregion
 
+            #region [public] {static} (IPropertyKey) AVX512_PF: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_PF.<br/>
+            /// AVX-512 Prefetch Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_PF"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_PF => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_PF);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_ER: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_ER.<br/>
+            /// AVX-512 Exponential and Reciprocal Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_ER"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_ER => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_ER);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_CD: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_CD.<br/>
+            /// AVX-512 Conflict Detection Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_CD"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_CD => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_CD);
+            #endregion
+
             #region [public] {static} (IPropertyKey) SHA: Gets a value representing the key to retrieve the property value
             /// <summary>
             /// <para>Gets a value representing the key to retrieve the property value.</para>
@@ -3039,6 +3202,52 @@ namespace iTin.Hardware.Specification.Cpuid
             /// </para>
             /// </summary>
             public static IPropertyKey SHA => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.SHA);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_BW: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_BW.<br/>
+            /// AVX-512 Byte and Word Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_BW"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_BW => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_BW);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_VL: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_VL.<br/>
+            /// AVX-512 Vector Length Extensions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_VL"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_VL => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_VL);
             #endregion
 
             #endregion
@@ -3066,6 +3275,29 @@ namespace iTin.Hardware.Specification.Cpuid
             /// </para>
             /// </summary>
             public static IPropertyKey PREFETCHWT1 => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.PREFETCHWT1);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_VBMI: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_VBMI.<br/>
+            /// AVX-512 Vector Bit Manipulation Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_VBMI"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_VBMI => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_VBMI);
             #endregion
 
             #region [public] {static} (IPropertyKey) UMIP: Gets a value representing the key to retrieve the property value
@@ -3137,7 +3369,237 @@ namespace iTin.Hardware.Specification.Cpuid
             public static IPropertyKey OSPKE => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.OSPKE);
             #endregion
 
-            #region [public] {static} (IPropertyKey) OSPKE: Gets a value representing the key to retrieve the property value
+            #region [public] {static} (IPropertyKey) WAITPKG: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// WAITPKG.<br/>
+            /// Timed pause and user-level monitor/wait.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.WAITPKG"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey WAITPKG => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.WAITPKG);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_VBMI2: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_VBMI2.<br/>
+            /// AVX-512 Vector Bit Manipulation Instructions 2.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_VBMI2"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_VBMI2 => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_VBMI2);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) CET_SS: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// CET_SS.<br/>
+            /// Control flow enforcement (CET) shadow stack.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.CET_SS"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey CET_SS => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.CET_SS);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) GFNI: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// GFNI.<br/>
+            /// Galois Field instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.GFNI"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey GFNI => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.GFNI);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) VAES: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// VAES.<br/>
+            /// Vector AES instruction set (VEX-256/EVEX).<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.VAES"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey VAES => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.VAES);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) VPCLMULQDQ: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// VPCLMULQDQ.<br/>
+            /// CLMUL instruction set (VEX-256/EVEX).<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.VPCLMULQDQ"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey VPCLMULQDQ => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.VPCLMULQDQ);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_VNNI: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_VNNI.<br/>
+            /// AVX-512 Vector Neural Network Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_VNNI"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_VNNI => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_VNNI);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_BITALG: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_BITALG.<br/>
+            /// AVX-512 BITALG instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_BITALG"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_BITALG => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_BITALG);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_VPOPCNTDQ: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_VPOPCNTDQ.<br/>
+            /// AVX-512 Vector Population Count Double and Quad-word.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_VPOPCNTDQ"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_VPOPCNTDQ => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_VPOPCNTDQ);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) ITL_5_LEVELPG: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// ITL_5_LEVELPG.<br/>
+            /// Intel 5-level paging.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.ITL_5_LEVELPG"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey ITL_5_LEVELPG => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.ITL_5_LEVELPG);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) RDPID: Gets a value representing the key to retrieve the property value
             /// <summary>
             /// <para>Gets a value representing the key to retrieve the property value.</para>
             /// <para>
@@ -3158,6 +3620,96 @@ namespace iTin.Hardware.Specification.Cpuid
             /// </para>
             /// </summary>
             public static IPropertyKey RDPID => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.RDPID);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) CLDEMOTE: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// CLDEMOTE.<br/>
+            /// Cache line demote.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.CLDEMOTE"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey CLDEMOTE => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.CLDEMOTE);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) MOVDIRI: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// MOVDIRI.
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.MOVDIRI"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey MOVDIRI => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.MOVDIRI);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) MOVDIR64B: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// MOVDIR64B.
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.MOVDIR64B"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey MOVDIR64B => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.MOVDIR64B);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) ENQCMD: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// ENQCMD.<br/>
+            /// Enqueue Stores.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.ENQCMD"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey ENQCMD => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.ENQCMD);
             #endregion
 
             #region [public] {static} (IPropertyKey) SGX_LC: Gets a value representing the key to retrieve the property value
@@ -3181,6 +3733,568 @@ namespace iTin.Hardware.Specification.Cpuid
             /// </para>
             /// </summary>
             public static IPropertyKey SGX_LC => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.SGX_LC);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) PKS: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// PKS.<br/>
+            /// Protection keys for supervisor-mode pages.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.PKS"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey PKS => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.PKS);
+            #endregion
+
+            #endregion
+
+            #region edx register
+
+            #region [public] {static} (IPropertyKey) AVX512_4VNNIW: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_4VNNIW.<br/>
+            /// AVX-512 4-register Neural Network Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_4VNNIW"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_4VNNIW => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_4VNNIW);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_4FMAPS: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_4FMAPS.<br/>
+            /// AVX-512 4-register Multiply Accumulation Single precision.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_4FMAPS"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_4FMAPS => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_4FMAPS);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) FSRM: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// FSRM.<br/>
+            /// Fast Short REP MOVSB.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.FSRM"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey FSRM => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.FSRM);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AVX512_VP2INTERSECT: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX512_VP2INTERSECT.<br/>
+            /// AVX-512 VP2INTERSECT Doubleword and Quadword Instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_VP2INTERSECT"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_VP2INTERSECT => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_VP2INTERSECT);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) SRBDS_CTRL: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// SRBDS_CTRL.<br/>
+            /// Special Register Buffer Data Sampling Mitigations.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.SRBDS_CTRL"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey SRBDS_CTRL => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.SRBDS_CTRL);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) MD_CLEAR: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// MD_CLEAR.<br/>
+            /// VERW instruction clears CPU buffers.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.MD_CLEAR"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey MD_CLEAR => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.MD_CLEAR);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) TSX_FORCE_ABORT: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// TSX_FORCE_ABORT.
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.TSX_FORCE_ABORT"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey TSX_FORCE_ABORT => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.TSX_FORCE_ABORT);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) SERIALIZE: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// SERIALIZE.
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.SERIALIZE"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey SERIALIZE => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.SERIALIZE);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) HYBRID: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// HYBRID.
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.HYBRID"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey HYBRID => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.HYBRID);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) TSXLDTRK: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// TSXLDTRK.<br/>
+            /// TSX suspend load address tracking.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.TSXLDTRK"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey TSXLDTRK => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.TSXLDTRK);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) PCONFIG: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// PCONFIG.<br/>
+            /// Platform configuration (Memory Encryption Technologies Instructions).<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.PCONFIG"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey PCONFIG => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.PCONFIG);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) LBR: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// LBR.<br/>
+            /// Architectural Last Branch Records.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.LBR"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey LBR => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.LBR);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) CET_IBT: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// CET_IBT.<br/>
+            /// Control flow enforcement (CET) indirect branch tracking.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.CET_IBT"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey CET_IBT => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.CET_IBT);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AMX_BF16: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AMX_BF16.<br/>
+            /// Tile computation on bfloat16 numbers.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AMX_BF16"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AMX_BF16 => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AMX_BF16);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AMX_TILE: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AMX_TILE.<br/>
+            /// Tile architecture.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AMX_TILE"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AMX_TILE => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AMX_TILE);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) AMX_INT8: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AMX_INT8.<br/>
+            /// Tile computation on 8-bit integers.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AMX_INT8"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AMX_INT8 => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AMX_INT8);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) IBRS_IBPB: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// IBRS_IBPB.<br/>
+            /// Speculation Control, part of Indirect Branch Control (IBC).<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.IBRS_IBPB"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey IBRS_IBPB => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.IBRS_IBPB);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) STIBP: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// STIBP.<br/>
+            /// Single Thread Indirect Branch Predictor, part of IBC.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.STIBP"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey STIBP => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.STIBP);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) L1D_FLUSH: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// L1D_FLUSH.<br/>
+            /// IA32_FLUSH_CMD MSR.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.L1D_FLUSH"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey L1D_FLUSH => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.L1D_FLUSH);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) IA32_ARCH_CAPABILITIES: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// IA32_ARCH_CAPABILITIES.<br/>
+            /// Speculative Side Channel Mitigations.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.IA32_ARCH_CAPABILITIES"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey IA32_ARCH_CAPABILITIES => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.IA32_ARCH_CAPABILITIES);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) IA32_CORE_CAPABILITIES: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// IA32_CORE_CAPABILITIES.<br/>
+            /// Support for a MSR listing model-specific core capabilities.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.IA32_CORE_CAPABILITIES"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey IA32_CORE_CAPABILITIES => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.IA32_CORE_CAPABILITIES);
+            #endregion
+
+            #region [public] {static} (IPropertyKey) SSBD: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// SSBD.<br/>
+            /// Speculative Store Bypass Disable.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.SSBD"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey SSBD => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.SSBD);
+            #endregion
+
+            #endregion
+
+            #endregion
+
+            #region SubLeaf: One
+
+            #region ebx register
+
+            #region [public] {static} (IPropertyKey) AVX512_BF16: Gets a value representing the key to retrieve the property value
+            /// <summary>
+            /// <para>Gets a value representing the key to retrieve the property value.</para>
+            /// <para>
+            /// AVX-512 BFLOAT16 instructions.<br/>
+            /// </para>
+            /// <para>
+            ///  <para><b>Key Composition</b></para>
+            ///  <list type="bullet">
+            ///   <item><description>Leaf: <see cref="Leaf.ExtendedFeatures"/></description></item>
+            ///   <item><description>Property: <see cref="Leaf00000007Property.AVX512_BF16"/></description></item>
+            ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
+            ///  </list>
+            /// </para>
+            /// <para>
+            ///  <para><b>Return Value</b></para>
+            ///  <para>Type: <see cref="bool"/></para>
+            /// </para>
+            /// </summary>
+            public static IPropertyKey AVX512_BF16 => new PropertyKey(Leaf.ExtendedFeatures, Leaf00000007Property.AVX512_BF16);
+            #endregion
+
             #endregion
 
             #endregion

@@ -11,11 +11,113 @@ Changes in this version (v1.0.3)
 · Added
   -----
 
-    - Adds LeafProperty.ProcessorInfoAndFeatures.Features.HYPERVISOR property. Thanks to @li-zhixin.
+    - New Properties added
+
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | Property                                                     Description                                                             Comments                                                            |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ProcessorInfoAndFeatures.Features.HYPERVISOR    Hypervisor present (always zero on physical CPUs)                       Thanks to @li-zhixin                                                |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_F                       AVX-512 Foundation                                                      https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_DQ                      AVX-512 Doubleword and Quadword Instructions                            https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_IFMA                    AVX-512 Integer Fused Multiply-Add Instructions                         https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.PCOMMIT                        PCOMMIT instruction                                                     https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_PF                      AVX-512 Prefetch Instructions                                           https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_ER                      AVX-512 Exponential and Reciprocal Instructions                         https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_CD                      AVX-512 Conflict Detection Instructions                                 https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_BW                      AVX-512 Byte and Word Instructions                                      https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_VL                      AVX-512 Vector Length Extensions                                        https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_VBMI                    AVX-512 Vector Bit Manipulation Instructions                            https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.WAITPKG                        Timed pause and user-level monitor/wait                                 https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_VBMI2                   AVX-512 Vector Bit Manipulation Instructions 2                          https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.CET_SS                         Control flow enforcement (CET) shadow stack                             https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.GFNI                           Galois Field instructions                                               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.VAES                           Vector AES instruction set (VEX-256/EVEX)                               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.VPCLMULQDQ                     CLMUL instruction set (VEX-256/EVEX)                                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_VNNI                    AVX-512 Vector Neural Network Instructions                              https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_BITALG                  AVX-512 BITALG instructions                                             https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_VPOPCNTDQ               AVX-512 Vector Population Count Double and Quad-word                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.ITL_5_LEVELPG                  Intel 5-level paging                                                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.CLDEMOTE                       Cache line demote                                                       https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.MOVDIRI                        MOVDIRI                                                                 https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.MOVDIR64B                      MOVDIR64B                                                               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.ENQCMD                         Enqueue Stores                                                          https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.PKS                            Protection keys for supervisor-mode pages                               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_4VNNIW                  AVX-512 4-register Neural Network Instructions                          https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_4FMAPS                  AVX-512 4-register Multiply Accumulation Single precision               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.FSRM                           Fast Short REP MOVSB                                                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_VP2INTERSECT            AVX-512 VP2INTERSECT Doubleword and Quadword Instructions               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.SRBDS_CTRL                     Special Register Buffer Data Sampling Mitigations                       https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.MD_CLEAR                       VERW instruction clears CPU buffers                                     https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.TSX_FORCE_ABORT                TSX_FORCE_ABORT                                                         https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.SERIALIZE                      SERIALIZE                                                               https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.HYBRID                         Hybrid                                                                  https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.TSXLDTRK                       TSX suspend load address tracking                                       https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.PCONFIG                        Platform configuration (Memory Encryption Technologies Instructions)    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.LBR                            Architectural Last Branch Records                                       https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.CET_IBT                        Control flow enforcement (CET) indirect branch tracking                 https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AMX_BF16                       Tile computation on bfloat16 numbers                                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AMX_TILE                       Tile architecture                                                       https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AMX_INT8                       Tile computation on 8-bit integers                                      https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.IBRS_IBPB                      Speculation Control, part of Indirect Branch Control (IBC)              https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.STIBP                          Single Thread Indirect Branch Predictor, part of IBC                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.L1D_FLUSH                      IA32_FLUSH_CMD MSR                                                      https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.IA32_ARCH_CAPABILITIES         Speculative Side Channel Mitigations                                    https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.IA32_CORE_CAPABILITIES         Support for a MSR listing model-specific core capabilities              https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.SSBD                           Speculative Store Bypass Disable                                        https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | LeafProperty.ExtendedFeatures.AVX512_BF16                    AVX-512 BFLOAT16 instructions                                           https://en.wikipedia.org/wiki/CPUID#EAX=7,_ECX=0:_Extended_Features |
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     - Library documentation.
 
-    - tools folder in solution root. Contains a script for update help md files.
+    - Tools folder in solution root. Contains a script for update help md files.
 
 · Changed
   -------

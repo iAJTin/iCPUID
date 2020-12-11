@@ -607,6 +607,8 @@ namespace iTin.Hardware.Specification.Cpuid
     /// </summary>
     internal enum Leaf00000007Property
     {
+        #region SubLeaf: Main
+
         #region ebx register
 
         [PropertyName("FSGSBASE")]
@@ -689,6 +691,16 @@ namespace iTin.Hardware.Specification.Cpuid
         [PropertyType(typeof(bool))]
         RDT_A,
 
+        [PropertyName("AVX512_F")]
+        [PropertyDescription("AVX-512 Foundation")]
+        [PropertyType(typeof(bool))]
+        AVX512_F,
+
+        [PropertyName("AVX512_DQ")]
+        [PropertyDescription("AVX-512 Doubleword and Quadword Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_DQ,
+
         [PropertyName("RDSEED")]
         [PropertyDescription("RDSEED Instruction")]
         [PropertyType(typeof(bool))]
@@ -703,6 +715,16 @@ namespace iTin.Hardware.Specification.Cpuid
         [PropertyDescription("Supervisor Mode Access Prevention")]
         [PropertyType(typeof(bool))]
         SMAP,
+
+        [PropertyName("AVX512_IFMA")]
+        [PropertyDescription("AVX-512 Integer Fused Multiply-Add Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_IFMA,
+
+        [PropertyName("PCOMMIT")]
+        [PropertyDescription("PCOMMIT instruction")]
+        [PropertyType(typeof(bool))]
+        PCOMMIT,
 
         [PropertyName("CLFLUSHOPT")]
         [PropertyDescription("CLFLUSHOPT Instruction")]
@@ -719,10 +741,35 @@ namespace iTin.Hardware.Specification.Cpuid
         [PropertyType(typeof(bool))]
         IPT,
 
+        [PropertyName("AVX512_PF")]
+        [PropertyDescription("AVX-512 Prefetch Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_PF,
+
+        [PropertyName("AVX512_ER")]
+        [PropertyDescription("AVX-512 Exponential and Reciprocal Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_ER,
+
+        [PropertyName("AVX512_CD")]
+        [PropertyDescription("AVX-512 Conflict Detection Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_CD,
+
         [PropertyName("SHA")]
         [PropertyDescription("Intel SHA extensions")]
         [PropertyType(typeof(bool))]
         SHA,
+
+        [PropertyName("AVX512_BW")]
+        [PropertyDescription("AVX-512 Byte and Word Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_BW,
+
+        [PropertyName("AVX512_VL")]
+        [PropertyDescription("AVX-512 Vector Length Extensions")]
+        [PropertyType(typeof(bool))]
+        AVX512_VL,
 
         #endregion
 
@@ -732,6 +779,11 @@ namespace iTin.Hardware.Specification.Cpuid
         [PropertyDescription("PREFETCHWT1 Instruction")]
         [PropertyType(typeof(bool))]
         PREFETCHWT1,
+
+        [PropertyName("AVX512_VBMI")]
+        [PropertyDescription("AVX-512 Vector Bit Manipulation Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_VBMI,
 
         [PropertyName("UMIP")]
         [PropertyDescription("User-mode Instruction Prevention")]
@@ -748,15 +800,219 @@ namespace iTin.Hardware.Specification.Cpuid
         [PropertyType(typeof(bool))]
         OSPKE,
 
+        [PropertyName("WAITPKG")]
+        [PropertyDescription("Timed pause and user-level monitor/wait")]
+        [PropertyType(typeof(bool))]
+        WAITPKG,
+
+        [PropertyName("AVX512_VBMI2")]
+        [PropertyDescription("AVX-512 Vector Bit Manipulation Instructions 2")]
+        [PropertyType(typeof(bool))]
+        AVX512_VBMI2,
+
+        [PropertyName("CET_SS")]
+        [PropertyDescription("Control flow enforcement (CET) shadow stack")]
+        [PropertyType(typeof(bool))]
+        CET_SS,
+
+        [PropertyName("GFNI")]
+        [PropertyDescription("Galois Field instructions")]
+        [PropertyType(typeof(bool))]
+        GFNI,
+
+        [PropertyName("VAES")]
+        [PropertyDescription("Vector AES instruction set (VEX-256/EVEX)")]
+        [PropertyType(typeof(bool))]
+        VAES,
+
+        [PropertyName("VPCLMULQDQ")]
+        [PropertyDescription("CLMUL instruction set (VEX-256/EVEX)")]
+        [PropertyType(typeof(bool))]
+        VPCLMULQDQ,
+
+        [PropertyName("AVX512_VNNI")]
+        [PropertyDescription("AVX-512 Vector Neural Network Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_VNNI,
+
+        [PropertyName("AVX512_BITALG")]
+        [PropertyDescription("AVX-512 BITALG instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_BITALG,
+
+        [PropertyName("AVX512_VPOPCNTDQ")]
+        [PropertyDescription("AVX-512 Vector Population Count Double and Quad-word")]
+        [PropertyType(typeof(bool))]
+        AVX512_VPOPCNTDQ,
+
+        [PropertyName("ITL_5_LEVELPG")]
+        [PropertyDescription("Intel 5-level paging")]
+        [PropertyType(typeof(bool))]
+        ITL_5_LEVELPG,
+
         [PropertyName("RDPID")]
         [PropertyDescription("Read Processor ID and IA32_TSC_AUX")]
         [PropertyType(typeof(bool))]
         RDPID,
 
+        [PropertyName("CLDEMOTE")]
+        [PropertyDescription("Cache line demote")]
+        [PropertyType(typeof(bool))]
+        CLDEMOTE,
+
+        [PropertyName("MOVDIRI")]
+        [PropertyDescription("MOVDIRI")]
+        [PropertyType(typeof(bool))]
+        MOVDIRI,
+
+        [PropertyName("MOVDIR64B")]
+        [PropertyDescription("MOVDIR64B")]
+        [PropertyType(typeof(bool))]
+        MOVDIR64B,
+
+        [PropertyName("ENQCMD")]
+        [PropertyDescription("Enqueue Stores")]
+        [PropertyType(typeof(bool))]
+        ENQCMD,
+
         [PropertyName("SGX-LC")]
         [PropertyDescription("SGX Launch Configuration")]
         [PropertyType(typeof(bool))]
         SGX_LC,
+
+        [PropertyName("PKS")]
+        [PropertyDescription("Protection keys for supervisor-mode pages")]
+        [PropertyType(typeof(bool))]
+        PKS,
+
+        #endregion
+
+        #region edx register
+
+        [PropertyName("AVX512_4VNNIW")]
+        [PropertyDescription("AVX-512 4-register Neural Network Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_4VNNIW,
+
+        [PropertyName("AVX512_4FMAPS")]
+        [PropertyDescription("AVX-512 4-register Multiply Accumulation Single precision")]
+        [PropertyType(typeof(bool))]
+        AVX512_4FMAPS,
+
+        [PropertyName("FSRM")]
+        [PropertyDescription("Fast Short REP MOVSB")]
+        [PropertyType(typeof(bool))]
+        FSRM,
+
+        [PropertyName("AVX512_VP2INTERSECT")]
+        [PropertyDescription("AVX-512 VP2INTERSECT Doubleword and Quadword Instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_VP2INTERSECT,
+
+        [PropertyName("SRBDS_CTRL")]
+        [PropertyDescription("Special Register Buffer Data Sampling Mitigations")]
+        [PropertyType(typeof(bool))]
+        SRBDS_CTRL,
+
+        [PropertyName("MD_CLEAR")]
+        [PropertyDescription("VERW instruction clears CPU buffers")]
+        [PropertyType(typeof(bool))]
+        MD_CLEAR,
+
+        [PropertyName("TSX_FORCE_ABORT")]
+        [PropertyDescription("TSX_FORCE_ABORT")]
+        [PropertyType(typeof(bool))]
+        TSX_FORCE_ABORT,
+
+        [PropertyName("SERIALIZE")]
+        [PropertyDescription("SERIALIZE")]
+        [PropertyType(typeof(bool))]
+        SERIALIZE,
+
+        [PropertyName("HYBRID")]
+        [PropertyDescription("HYBRID")]
+        [PropertyType(typeof(bool))]
+        HYBRID,
+
+        [PropertyName("TSXLDTRK")]
+        [PropertyDescription("TSX suspend load address tracking")]
+        [PropertyType(typeof(bool))]
+        TSXLDTRK,
+
+        [PropertyName("PCONFIG")]
+        [PropertyDescription("Platform configuration (Memory Encryption Technologies Instructions)")]
+        [PropertyType(typeof(bool))]
+        PCONFIG,
+
+        [PropertyName("LBR")]
+        [PropertyDescription("Architectural Last Branch Records")]
+        [PropertyType(typeof(bool))]
+        LBR,
+
+        [PropertyName("CET_IBT")]
+        [PropertyDescription("Control flow enforcement (CET) indirect branch tracking")]
+        [PropertyType(typeof(bool))]
+        CET_IBT,
+
+        [PropertyName("AMX_BF16")]
+        [PropertyDescription("Tile computation on bfloat16 numbers")]
+        [PropertyType(typeof(bool))]
+        AMX_BF16,
+
+        [PropertyName("AMX_TILE")]
+        [PropertyDescription("Tile architecture")]
+        [PropertyType(typeof(bool))]
+        AMX_TILE,
+
+        [PropertyName("AMX_INT8")]
+        [PropertyDescription("Tile computation on 8-bit integers")]
+        [PropertyType(typeof(bool))]
+        AMX_INT8,
+
+        [PropertyName("IBRS_IBPB")]
+        [PropertyDescription("Speculation Control, part of Indirect Branch Control (IBC)")]
+        [PropertyType(typeof(bool))]
+        IBRS_IBPB,
+
+        [PropertyName("STIBP")]
+        [PropertyDescription("Single Thread Indirect Branch Predictor, part of IBC")]
+        [PropertyType(typeof(bool))]
+        STIBP,
+
+        [PropertyName("L1D_FLUSH")]
+        [PropertyDescription("IA32_FLUSH_CMD MSR")]
+        [PropertyType(typeof(bool))]
+        L1D_FLUSH,
+
+        [PropertyName("IA32_ARCH_CAPABILITIES")]
+        [PropertyDescription("Speculative Side Channel Mitigations")]
+        [PropertyType(typeof(bool))]
+        IA32_ARCH_CAPABILITIES,
+
+        [PropertyName("IA32_CORE_CAPABILITIES")]
+        [PropertyDescription("Support for a MSR listing model-specific core capabilities")]
+        [PropertyType(typeof(bool))]
+        IA32_CORE_CAPABILITIES,
+
+        [PropertyName("SSBD")]
+        [PropertyDescription("Speculative Store Bypass Disable")]
+        [PropertyType(typeof(bool))]
+        SSBD,
+
+        #endregion
+
+        #endregion
+
+        #region SubLeaf: One
+
+        #region eax register
+
+        [PropertyName("AVX512_BF16")]
+        [PropertyDescription("AVX-512 BFLOAT16 instructions")]
+        [PropertyType(typeof(bool))]
+        AVX512_BF16,
+
+        #endregion
 
         #endregion
     }
