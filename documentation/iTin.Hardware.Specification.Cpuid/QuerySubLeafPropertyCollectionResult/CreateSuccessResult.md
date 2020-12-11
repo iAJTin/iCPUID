@@ -3,12 +3,13 @@
 Returns a new success result.
 
 ```csharp
-public static QuerySubLeafPropertyCollectionResult CreateSuccessResult(CpuidSubLeafDictionary value)
+public static QuerySubLeafPropertyCollectionResult CreateSuccessResult(
+    CpuidSubLeafDictionary Result)
 ```
 
 | parameter | description |
 | --- | --- |
-| value | Result value |
+| Result | Result Result |
 
 ## Return Value
 

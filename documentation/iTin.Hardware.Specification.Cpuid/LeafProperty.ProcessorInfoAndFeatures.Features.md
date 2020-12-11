@@ -30,6 +30,7 @@ public static class Features
 | static [FPU](LeafProperty.ProcessorInfoAndFeatures.Features/FPU.md) { get; } | Gets a value representing the key to retrieve the property value. |
 | static [FXSR](LeafProperty.ProcessorInfoAndFeatures.Features/FXSR.md) { get; } | Gets a value representing the key to retrieve the property value. |
 | static [HTT](LeafProperty.ProcessorInfoAndFeatures.Features/HTT.md) { get; } | Gets a value representing the key to retrieve the property value. |
+| static [HYPERVISOR](LeafProperty.ProcessorInfoAndFeatures.Features/HYPERVISOR.md) { get; } | Gets a value representing the key to retrieve the property value. |
 | static [IA64](LeafProperty.ProcessorInfoAndFeatures.Features/IA64.md) { get; } | Gets a value representing the key to retrieve the property value. |
 | static [MCA](LeafProperty.ProcessorInfoAndFeatures.Features/MCA.md) { get; } | Gets a value representing the key to retrieve the property value. |
 | static [MCE](LeafProperty.ProcessorInfoAndFeatures.Features/MCE.md) { get; } | Gets a value representing the key to retrieve the property value. |

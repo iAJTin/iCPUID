@@ -27,13 +27,13 @@ Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 ```csharp
 public static QuerySubLeafPropertyCollectionResult CreateErroResult(IResultError[] errors, 
-    CpuidSubLeafDictionary value)
+    CpuidSubLeafDictionary Result)
 ```
 
 | parameter | description |
 | --- | --- |
 | errors | A errors collection |
-| value | Result value |
+| Result | Result Result |
 
 ## Return Value
 
@@ -78,13 +78,13 @@ Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 ```csharp
 public static QuerySubLeafPropertyCollectionResult CreateErroResult(string message, 
-    CpuidSubLeafDictionary value, string code = "")
+    CpuidSubLeafDictionary Result, string code = "")
 ```
 
 | parameter | description |
 | --- | --- |
 | message | Error message |
-| value | Result value |
+| Result | Result Result |
 | code | Error code |
 
 ## Return Value
