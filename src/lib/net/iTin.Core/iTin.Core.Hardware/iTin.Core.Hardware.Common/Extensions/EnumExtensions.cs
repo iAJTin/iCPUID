@@ -1,12 +1,12 @@
 
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
+
 namespace iTin.Core.Hardware.Common
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Linq;
-    using System.Reflection;
-
     /// <summary>
     /// Static class than contains extension methods for items of type <see cref="T:System.Enum" />.
     /// </summary>

@@ -1,6 +1,42 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 
+
+### Fixed
+
+ - Fixes an issue that generates an exception when a property that returns an object of type QueryPropertyDictionaryResult not available.
+
+### Added
+
+- Added support for **netstandard2.1** 
+ 
+   - Add **SplitEnumerator** ref struct.
+   
+   - **ByteReader** class rewritten to work with **Span** in net core projects.
+
+- Added sample project for **net60**
+
+### Changed
+  
+ - Changed **```IResultGeneric```** interface. Changed **```Value```** property name by **```Result```** (for code clarify).
+ 
+       This change may have implications in your final code, it is resolved by changing Value to Result
+ 
+ - Update result classes for support more scenaries.
+ 
+ - Library versions for this version
+  
+    |Library|Version|Description|
+    |:------|:------|:----------|
+    |iTin.Core| **2.0.0.4** | Base library containing various extensions, helpers, common constants |
+    |iTin.Core.Hardware.Common| **1.0.0.3** | Common Hardware Infrastructure |
+    |iTin.Core.Hardware.CrossPlatform.Cpuid| 1.0.0.0 | Cross-Platform Generic Hardware Calls (CPUID) |
+    |iTin.Core.Interop.CrossPlatform.Cpuid| 1.0.0.0 |Generic Cross-Platform Interop Calls (CPUID) |
+    |iTin.Core.Interop.Shared| **1.0.0.2** | Generic Shared Interop Definitions, Data Structures, Constants... |
+    |iTin.Hardware.Specification.Cpuid| **1.0.0.2** | CPUID Specification Implementation |
+    |iTin.Logging| **1.0.0.1** | Logging library |
+
 ## [1.0.3] - 2020-12-11
 
 ### Added
@@ -82,7 +118,6 @@ All notable changes to this project will be documented in this file.
     |iTin.Core.Interop.Shared| 1.0.0.0 | Generic Shared Interop Definitions, Data Structures, Constants... |
     |iTin.Hardware.Specification.Cpuid| **1.0.0.2** | CPUID Specification Implementation |
     |iTin.Logging| 1.0.0.0 | Logging library |
-
 
 ## [1.0.2] - 2020-10-12
 
@@ -176,6 +211,7 @@ https://github.com/iAJTin/iCPUID/blob/master/src/lib/rust/cpuid.md
             - iCPUID.ConsoleApp                        [Console Test App]
 
 
+[1.0.4]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.4
 [1.0.3]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.3
 [1.0.2]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.2
 [1.0.1]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.1

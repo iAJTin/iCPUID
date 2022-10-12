@@ -1,8 +1,8 @@
 ﻿
+using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
+
 namespace iTin.Core.Hardware.CrossPlatform.Cpuid
 {
-    using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
-
     /// <summary>
     /// Methods for handle CPUID microprocessor features.
     /// </summary>

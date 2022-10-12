@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Description>iCPUID Sample App</Description>
+    <Copyright>Copyright © 2019</Copyright>
+    <Company>iTin</Company>
+    <Product>iCPUID.ConsoleAppCoreNuget</Product>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <Target Name="CopyCpuid_win" AfterTargets="Build" Condition=" '$(OS)' == 'Windows_NT' ">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-x64\native\cpuid.*" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyCpuid_osx" AfterTargets="Build" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))'">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\osx-x64\native\libcpuid.dylib" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+  
+  <Target Name="CopyCpuid_linux" AfterTargets="Build" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\linux-x64\native\libcpuid.so" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+  
+  <ItemGroup>
+    <PackageReference Include="iCPUID" Version="1.0.3" />
+  </ItemGroup>
+
+</Project>

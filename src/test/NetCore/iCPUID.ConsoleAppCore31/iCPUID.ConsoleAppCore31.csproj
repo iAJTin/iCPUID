@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\lib\net\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\iTin.Core.Hardware.Common.csproj" />
-    <ProjectReference Include="..\..\lib\net\iTin.Hardware\iTin.Hardware.Specification\iTin.Hardware.Specification.Cpuid\iTin.Hardware.Specification.Cpuid.csproj" />
+    <ProjectReference Include="..\..\..\lib\net\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\iTin.Core.Hardware.Common.csproj" />
+    <ProjectReference Include="..\..\..\lib\net\iTin.Hardware\iTin.Hardware.Specification\iTin.Hardware.Specification.Cpuid\iTin.Hardware.Specification.Cpuid.csproj" />
   </ItemGroup>
 
   <Target Name="CopyCpuid_win" AfterTargets="Build" Condition=" '$(OS)' == 'Windows_NT' ">

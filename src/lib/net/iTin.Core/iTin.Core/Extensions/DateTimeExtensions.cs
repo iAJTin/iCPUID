@@ -1,11 +1,17 @@
 
+#if NETSTANDARD2_1 || NET5_0_OR_GREATER
+    
+    using System.Linq;
+
+#endif
+
+using System;
+using System.Globalization;
+
+using iTin.Logging;
+
 namespace iTin.Core
 {
-    using System;
-    using System.Globalization;
-
-    using Logging;
-
     /// <summary>
     /// Static class than contains extension methods for objects of type <see cref="T:System.DateTime" />.
     /// </summary> 
@@ -21,7 +27,7 @@ namespace iTin.Core
         public static string ToLongDataBaseFormatAsDateTime(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'yyyy-MM-dd HH:mm:ss.fff' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToLongDataBaseFormatAsDateTime(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -42,7 +48,7 @@ namespace iTin.Core
         public static string ToShortDataBaseFormatAsDateTime(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'yyyy-MM-dd HH:mm:ss' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToShortDataBaseFormatAsDateTime(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -63,7 +69,7 @@ namespace iTin.Core
         public static string ToLongDataBaseFormatAsString(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'yyyyMMddHHmmss.fff' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToLongDataBaseFormatAsDateTime(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -84,7 +90,7 @@ namespace iTin.Core
         public static string ToShortDataBaseFormatAsString(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'yyyyMMddHHmmss' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToShortDataBaseFormatAsString(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -105,7 +111,7 @@ namespace iTin.Core
         public static string ToShortUiFormatAsString(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'dd/MM/yyyy' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToShortUiFormatAsString(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -126,7 +132,7 @@ namespace iTin.Core
         public static string ToShortUiFormatWithShortTimeAsString(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'dd/MM/yyyy HH'h'' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToShortUiFormatWithShortTimeAsString(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -147,7 +153,7 @@ namespace iTin.Core
         public static string ToLongUiFormatAsString(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts a DateTime object to 'dd/MM/yyyy HH:mm:ss' string format");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToLongUiFormatAsString(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -168,7 +174,7 @@ namespace iTin.Core
         public static string ToTimeSpanUiAsString(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug(" Converts time of the DateTime object with format 'HH:mm:ss'");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) ToTimeSpanUiAsString(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -189,7 +195,7 @@ namespace iTin.Core
         public static string DatePartOnly(this DateTime target)
         {
             Logger.Instance.Debug("");
-            Logger.Instance.Debug(" Assembly: iTin.Core, Namespace: iTin.Core, Class: DateTimeExtensions");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
             Logger.Instance.Debug($" Returns only date part of target {typeof(DateTime)}");
             Logger.Instance.Debug($" > Signature: ({typeof(string)}) DatePartOnly(this {typeof(DateTime)})");
             Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
@@ -210,19 +216,31 @@ namespace iTin.Core
         /// </returns>
         public static string[] Split(this DateTime target)
         {
-            var databaseFullDate = target.ToString();
+            var databaseFullDate = target.ToString(CultureInfo.CurrentCulture);
 
+#if NETSTANDARD2_1 || NET5_0_OR_GREATER
+
+            return databaseFullDate.SplitString(new[] {' '}).AsEnumerable().ToArray();
+#else
             return databaseFullDate.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+#endif
         }
 
         /// <summary>
-        /// 
+        /// Returns only time part of target <see cref="T:System.DateTime"/>.
         /// </summary>
-        /// <param name="target"></param>
+        /// <param name="target">target datetime</param>
         /// <returns>
+        /// Returns only time part of target datetime
         /// </returns>
         public static string TimePartOnly(this DateTime target)
         {
+            Logger.Instance.Debug("");
+            Logger.Instance.Debug($" Assembly: {typeof(DateTimeExtensions).Assembly.GetName().Name}, v{typeof(DateTimeExtensions).Assembly.GetName().Version}, Namespace: {typeof(DateTimeExtensions).Namespace}, Class: {nameof(DateTimeExtensions)}");
+            Logger.Instance.Debug($" Returns only time part of target {typeof(DateTime)}");
+            Logger.Instance.Debug($" > Signature: ({typeof(string)}) DatePartOnly(this {typeof(DateTime)})");
+            Logger.Instance.Debug($"   > target: {target.ToString(CultureInfo.CurrentCulture)}");
+
             var dateAndTime = target.Split();
             var existTimePart = dateAndTime.Length == 2;
 
