@@ -37,7 +37,7 @@
   </Target>
   
   <ItemGroup>
-    <PackageReference Include="iCPUID" Version="1.0.3" />
+    <PackageReference Include="iCPUID" Version="1.0.4" />
   </ItemGroup>
 
 </Project>
