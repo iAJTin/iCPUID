@@ -11,8 +11,8 @@ public abstract class LeafBase
 | name | description |
 | --- | --- |
 | [ImplementedProperties](LeafBase/ImplementedProperties.md) { get; } | Returns a list of implemented properties for this leaf. |
-| [Leaf](LeafBase/Leaf.md) { get; } | Gets the [`Leaf`](LeafBase/Leaf.md) value. |
-| [SubLeaf](LeafBase/SubLeaf.md) { get; } | Gets the [`SubLeaf`](LeafBase/SubLeaf.md) value. |
+| [Leaf](LeafBase/Leaf.md) { get; } | Gets the [`Leaf`](./LeafBase/Leaf.md) value. |
+| [SubLeaf](LeafBase/SubLeaf.md) { get; } | Gets the [`SubLeaf`](./LeafBase/SubLeaf.md) value. |
 | [GetProperty](LeafBase/GetProperty.md)(…) | Returns the value of specified property. Always returns the first appearance of the property. |
 | override [ToString](LeafBase/ToString.md)() | Returns a String that represents this instance. |
 
@@ -20,7 +20,7 @@ public abstract class LeafBase
 
 | name | description |
 | --- | --- |
-| [LeafBase](LeafBase/LeafBase.md)(…) | Initializes a new instance of the class [`LeafBase`](LeafBase.md). |
+| [LeafBase](LeafBase/LeafBase.md)(…) | Initializes a new instance of the class [`LeafBase`](./LeafBase.md). |
 | [InvokeResult](LeafBase/InvokeResult.md) { get; set; } | Gets or sets the result of executes the CPUID instruction with given leaf and optional subleaf. |
 | virtual [PopulateProperties](LeafBase/PopulateProperties.md)(…) | Populates the property collection for this leaf. |
 

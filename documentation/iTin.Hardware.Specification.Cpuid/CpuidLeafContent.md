@@ -10,8 +10,8 @@ public struct CpuidLeafContent
 
 | name | description |
 | --- | --- |
-| [CpuidLeafContent](CpuidLeafContent/CpuidLeafContent.md)(…) | Initializes a new instance of the [`CpuidLeafContent`](CpuidLeafContent.md) struct. |
-| [Leaf](CpuidLeafContent/Leaf.md) { get; } | Gets the [`Leaf`](CpuidLeafContent/Leaf.md) value. |
+| [CpuidLeafContent](CpuidLeafContent/CpuidLeafContent.md)(…) | Initializes a new instance of the [`CpuidLeafContent`](./CpuidLeafContent.md) struct. |
+| [Leaf](CpuidLeafContent/Leaf.md) { get; } | Gets the [`Leaf`](./CpuidLeafContent/Leaf.md) value. |
 | [Equals](CpuidLeafContent/Equals.md)(…) | Indicates whether the current object is equal to another object of the same type. |
 | override [Equals](CpuidLeafContent/Equals.md)(…) | Determines whether the specified Object is equal to this instance. |
 | override [GetHashCode](CpuidLeafContent/GetHashCode.md)() | Returns a hash code for this instance. |
