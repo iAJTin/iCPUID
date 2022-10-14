@@ -32,7 +32,7 @@ iCPUID is a lightweight cross-platform implementation that allows us to obtain t
 
 # Install via PowerShell
 
-Now if you want you can use iSMBIOS from PowerShell. It has the [iPowerShellSmbios] module available that contains a collection of Cmdlets that allow us to obtain the SMBIOS information. If you want to know more, please review the available documentation from [here].
+Now if you want you can use iCPUID from PowerShell. It has the [iPowerShellCpuid] module available that contains a collection of Cmdlets that allow us to obtain the CPUID information. If you want to know more, please review the available documentation from [here].
 
 - From PowerShellGallery
 
@@ -232,3 +232,5 @@ My email address is
 
 [email]: ./assets/email.png "email"
 [documentation]: ./documentation/iTin.Hardware.Specification.Cpuid.md
+[iPowerShellCpuid]: https://github.com/iAJTin/iPowerShellCpuid
+[here]: https://github.com/iAJTin/iPowerShellCpuid/blob/main/documentation/iPowerShellCpuid.md
