@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iCPUID.ConsoleApp</RootNamespace>
+    <AssemblyName>iCPUID.ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iTin.Core, Version=2.0.0.3, Culture=neutral, PublicKeyToken=91c459d24f0559c7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Hardware.Common, Version=1.0.0.2, Culture=neutral, PublicKeyToken=55a914aaf3e07893, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Core.Hardware.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Hardware.CrossPlatform.Cpuid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55a914aaf3e07893, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Core.Hardware.CrossPlatform.Cpuid.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Interop.CrossPlatform.Cpuid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1863a70dcfb63184, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Core.Interop.CrossPlatform.Cpuid.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Interop.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1863a70dcfb63184, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Core.Interop.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Hardware.Specification.Cpuid, Version=1.0.0.2, Culture=neutral, PublicKeyToken=4854c22d6845e07c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Hardware.Specification.Cpuid.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f353418c19ff38d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\iCPUID.1.0.3\lib\net461\iTin.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="CopyCpuid_win" AfterTargets="Build" Condition=" '$(OS)' == 'Windows_NT' ">
+    <ItemGroup>
+      <DataReaders Include="$(SolutionDir)references\cpuid\cpuid_0_1_0\win-x64\native\cpuid.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(DataReaders)" DestinationFolder="$(TargetDir)\" SkipUnchangedFiles="true" />
+  </Target>
+  <Import Project="..\..\..\..\packages\iCPUID.1.0.3\build\net461\iCPUID.targets" Condition="Exists('..\..\..\..\packages\iCPUID.1.0.3\build\net461\iCPUID.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\packages\iCPUID.1.0.3\build\net461\iCPUID.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\iCPUID.1.0.3\build\net461\iCPUID.targets'))" />
+  </Target>
+</Project>

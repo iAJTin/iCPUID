@@ -69,6 +69,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCPUID.ConsoleAppCore31", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCPUID.ConsoleAppCore60", "src\test\NetCore\iCPUID.ConsoleAppCore60\iCPUID.ConsoleAppCore60.csproj", "{9B3AC995-5841-4FE1-9209-E65404138EF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCPUID.ConsoleAppNuget", "src\test\FullFramework\iCPUID.ConsoleAppNuget\iCPUID.ConsoleAppNuget.csproj", "{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{9B3AC995-5841-4FE1-9209-E65404138EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3AC995-5841-4FE1-9209-E65404138EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3AC995-5841-4FE1-9209-E65404138EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +155,7 @@ Global
 		{212B28B4-CD31-4B9E-BB45-82A8F34940C8} = {36EE8C99-8A50-4B89-AB85-62889B7736EE}
 		{44086DA6-21AF-440C-BE21-EBC50B404CB8} = {46DC7660-8AC5-496D-A9AC-CC32176C9D7D}
 		{9B3AC995-5841-4FE1-9209-E65404138EF3} = {46DC7660-8AC5-496D-A9AC-CC32176C9D7D}
+		{9FE2BD1D-12B4-40AA-B3EE-DDA583B8D7BF} = {36EE8C99-8A50-4B89-AB85-62889B7736EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {865B30D7-C009-4E5F-AF69-2873D9859C1F}
