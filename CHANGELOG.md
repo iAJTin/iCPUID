@@ -1,6 +1,22 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 
+
+### Changed
+   
+ - Library versions for this version
+  
+    |Library|Version|Description|
+    |:------|:------|:----------|
+    |iTin.Core| **2.0.0.5** | Base library containing various extensions, helpers, common constants |
+    |iTin.Core.Hardware.Common| 1.0.0.3 | Common Hardware Infrastructure |
+    |iTin.Core.Hardware.CrossPlatform.Cpuid| 1.0.0.0 | Cross-Platform Generic Hardware Calls (CPUID) |
+    |iTin.Core.Interop.CrossPlatform.Cpuid| 1.0.0.0 |Generic Cross-Platform Interop Calls (CPUID) |
+    |iTin.Core.Interop.Shared| 1.0.0.2 | Generic Shared Interop Definitions, Data Structures, Constants... |
+    |iTin.Hardware.Specification.Cpuid| 1.0.0.2 | CPUID Specification Implementation |
+    |iTin.Logging| 1.0.0.1 | Logging library |
+
 ## [1.0.4] - 2022-10-14
 
 ### Fixed
@@ -211,6 +227,7 @@ https://github.com/iAJTin/iCPUID/blob/master/src/lib/rust/cpuid.md
             - iCPUID.ConsoleApp                        [Console Test App]
 
 
+[1.0.5]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.5
 [1.0.4]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.4
 [1.0.3]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.3
 [1.0.2]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.2
