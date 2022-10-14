@@ -30,6 +30,33 @@ iCPUID is a lightweight cross-platform implementation that allows us to obtain t
   </tr>
 </table>
 
+# Install via PowerShell
+
+Now if you want you can use iSMBIOS from PowerShell. It has the [iPowerShellSmbios] module available that contains a collection of Cmdlets that allow us to obtain the SMBIOS information. If you want to know more, please review the available documentation from [here].
+
+- From PowerShellGallery
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/iAJTin/iPowerShellCpuid">
+        <img src="https://img.shields.io/badge/-iPowerShellCpuid-green.svg?style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://www.powershellgallery.com/packages/iPowerShellCpuid/">
+        <img alt="PowerShellGallery Version" 
+             src="https://img.shields.io/powershellgallery/v/iPowerShellCpuid.svg?style=flat-square&label=iPowerShellCpuid" /> 
+      </a>
+    </td>  
+  </tr>
+</table>
+
+- From PowerShell console
+
+```PM> Install-Module -Name iPowerShellCpuid```
+
+
 # Usage
 
 Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
