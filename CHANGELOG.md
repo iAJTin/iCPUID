@@ -1,7 +1,15 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.0.5] - 
+## [1.0.5] - 20221015
+
+## Critical
+
+- **Important!!!**
+
+  **Fixes an error caused in the previous version, the nuget packages were not updated correctly when creating the version**
+
+  **I'm sorry for the inconveniences...**
 
 ### Changed
    

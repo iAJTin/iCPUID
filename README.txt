@@ -7,6 +7,14 @@ iCPUID is a lightweight cross-platform implementation that allows us to obtain t
 Changes in this version (v1.0.5)
 ================================
 
+· Critical
+  --------
+
+    - Important!!!
+
+      Fixes an error caused in the previous version, the nuget packages were not updated correctly when creating the version
+
+                                                I'm sorry for the inconveniences..
 · Changed
   -------
 
