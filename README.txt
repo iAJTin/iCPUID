@@ -67,7 +67,7 @@ v1.0.4
     ---------------------------------------------------------------------------------------------------------------------------------
     |iTin.Core.Interop.CrossPlatform.Cpuid      1.0.0.0       Generic Cross-Platform Interop Calls (CPUID)                          |
     ---------------------------------------------------------------------------------------------------------------------------------
-    |iTin.Core.Interop.Shared                   1.0.0.3       Generic Shared Interop Definitions, Data Structures, Constants...     |
+    |iTin.Core.Interop.Shared                   1.0.0.2       Generic Shared Interop Definitions, Data Structures, Constants...     |
     ---------------------------------------------------------------------------------------------------------------------------------
     |iTin.Hardware.Specification.Cpuid          1.0.0.2       CPUID Specification Implementation                                    |
     ---------------------------------------------------------------------------------------------------------------------------------
