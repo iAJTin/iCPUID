@@ -1,6 +1,4 @@
 ﻿
-using System.Diagnostics.CodeAnalysis;
-
 namespace iTin.Core.Hardware.Common
 {
     /// <summary>
@@ -51,7 +49,6 @@ namespace iTin.Core.Hardware.Common
         /// <summary>
         /// Hertzs
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Hz")]
         Hz,
 
         /// <summary>
@@ -62,7 +59,6 @@ namespace iTin.Core.Hardware.Common
         /// <summary>
         /// Kilohertz
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Hz")]
         KHz,
 
         /// <summary>
@@ -73,31 +69,26 @@ namespace iTin.Core.Hardware.Common
         /// <summary>
         /// Milliamps
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "m")]
         mA,
 
         /// <summary>
         /// Millimiters.
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "mm")]
         mm,
 
         /// <summary>
         /// 1/100 millimiters.
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "d_mm")]
         d_mm,
 
         /// <summary>
         /// millivolts
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "m")]
         mV,
 
         /// <summary>
         /// Tenths of millivolts
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "m")]
         d_mV,
 
         /// <summary>
@@ -108,8 +99,6 @@ namespace iTin.Core.Hardware.Common
         /// <summary>
         /// Miliwatts/hour
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "m")]
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Wh")]
         mWh,
 
         /// <summary>
@@ -120,19 +109,16 @@ namespace iTin.Core.Hardware.Common
         /// <summary>
         /// Megahertz
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Hz")]
         MHz,
 
         /// <summary>
         /// Megatransfers per second
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Hz")]
         MTs,
 
         /// <summary>
         /// Nanoseconds
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "ns")]
         ns,
 
         /// <summary>
@@ -148,30 +134,41 @@ namespace iTin.Core.Hardware.Common
         /// <summary>
         /// minute
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "RPM")]
         RPM,
 
         /// <summary>
         /// Standard unit of measure for rack-type or rack-mountable components, equals 1.75 inches or 4.445 cm
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "U")]
         U,
 
         /// <summary>
         /// Volts
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "V")]
         V,
 
         /// <summary>
         /// Watts.
         /// </summary>
-        [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "W")]
         W,
 
         /// <summary>
         /// Variable unit, will depend on the version of the implemented structure, please see the documentation of the property to know the correct unit.
         /// </summary>
-        Variable
+        Variable,
+
+        /// <summary>
+        /// Bits per color
+        /// </summary>
+        BitsxColor,
+
+        /// <summary>
+        /// Candela per square meter
+        /// </summary>
+        cdm2,
+
+        /// <summary>
+        /// Bits per component
+        /// </summary>
+        bpc
     }
 }

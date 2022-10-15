@@ -4,8 +4,34 @@ What is iCPUID?
 
 iCPUID is a lightweight cross-platform implementation that allows us to obtain the CPUID information. Works on Windows, Mac and Linux
 
-Changes in this version (v1.0.4)
+Changes in this version (v1.0.5)
 ================================
+
+· Changed
+  -------
+
+ - Library versions for this version
+
+    ---------------------------------------------------------------------------------------------------------------------------------
+    | Library                                   Version       Description                                                           |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core                                  2.0.0.5       Base library containing various extensions, helpers, common constants |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.Common                  1.0.0.4       Common Hardware Infrastructure                                        |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Hardware.CrossPlatform.Cpuid     1.0.0.0       Cross-Platform Generic Hardware Calls (CPUID)                         |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Interop.CrossPlatform.Cpuid      1.0.0.0       Generic Cross-Platform Interop Calls (CPUID)                          |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Core.Interop.Shared                   1.0.0.3       Generic Shared Interop Definitions, Data Structures, Constants...     |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Hardware.Specification.Cpuid          1.0.0.2       CPUID Specification Implementation                                    |
+    ---------------------------------------------------------------------------------------------------------------------------------
+    |iTin.Logging                               1.0.0.1       Logging library                                                       |
+    ---------------------------------------------------------------------------------------------------------------------------------
+
+v1.0.4
+======
 
 · Fixed
   -----
@@ -41,13 +67,12 @@ Changes in this version (v1.0.4)
     ---------------------------------------------------------------------------------------------------------------------------------
     |iTin.Core.Interop.CrossPlatform.Cpuid      1.0.0.0       Generic Cross-Platform Interop Calls (CPUID)                          |
     ---------------------------------------------------------------------------------------------------------------------------------
-    |iTin.Core.Interop.Shared                   1.0.0.1       Generic Shared Interop Definitions, Data Structures, Constants...     |
+    |iTin.Core.Interop.Shared                   1.0.0.3       Generic Shared Interop Definitions, Data Structures, Constants...     |
     ---------------------------------------------------------------------------------------------------------------------------------
     |iTin.Hardware.Specification.Cpuid          1.0.0.2       CPUID Specification Implementation                                    |
     ---------------------------------------------------------------------------------------------------------------------------------
     |iTin.Logging                               1.0.0.1       Logging library                                                       |
     ---------------------------------------------------------------------------------------------------------------------------------
-
 
 v1.0.3
 ======
