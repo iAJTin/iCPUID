@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
    
 
-## [1.0.5] - 20221015
+## [1.0.5] - 2022-10-15
 
 ## Critical
 
