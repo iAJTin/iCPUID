@@ -1,6 +1,11 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 
+
+### Changed
+   
+
 ## [1.0.5] - 20221015
 
 ## Critical
@@ -235,6 +240,7 @@ https://github.com/iAJTin/iCPUID/blob/master/src/lib/rust/cpuid.md
             - iCPUID.ConsoleApp                        [Console Test App]
 
 
+[1.0.6]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.6
 [1.0.5]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.5
 [1.0.4]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.4
 [1.0.3]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.3
