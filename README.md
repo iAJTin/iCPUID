@@ -10,7 +10,9 @@
 ***
 
 # What is iCPUID?
-iCPUID is a lightweight cross-platform implementation that allows us to obtain the CPUID information. Works on Windows, Mac and Linux
+iCPUID is a lightweight cross-platform implementation that allows us to obtain the CPUID information. 
+
+Works on Windows, Mac and Linux
 
 # Install via NuGet
 
