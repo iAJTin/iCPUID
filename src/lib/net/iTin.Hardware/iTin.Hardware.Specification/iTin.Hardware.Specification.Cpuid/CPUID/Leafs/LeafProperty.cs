@@ -1372,7 +1372,7 @@ namespace iTin.Hardware.Specification.Cpuid
                 ///  <para><b>Key Composition</b></para>
                 ///  <list type="bullet">
                 ///   <item><description>Leaf: <see cref="Leaf.ProcessorInfoAndFeatures"/></description></item>
-                ///   <item><description>Property: <see cref="Leaf00000001Property.DS"/></description></item>
+                ///   <item><description>Property: <see cref="Leaf00000001Property.ACPI"/></description></item>
                 ///   <item><description>Unit: <see cref="PropertyUnit.None"/></description></item>
                 ///  </list>
                 /// </para>
