@@ -1,9 +1,8 @@
 ﻿
+using System.Diagnostics;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Diagnostics;
-
-
     // Leaf 0x80000005: L1 Cache and TLB Identifiers
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•

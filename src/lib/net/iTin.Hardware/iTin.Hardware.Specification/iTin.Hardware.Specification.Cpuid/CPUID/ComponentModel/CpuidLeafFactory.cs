@@ -1,13 +1,13 @@
 ﻿
+using System.Collections.Generic;
+
+using iTin.Core;
+using iTin.Core.Hardware.CrossPlatform.Cpuid;
+using iTin.Core.Helpers.Enumerations;
+using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-
-    using iTin.Core;
-    using iTin.Core.Hardware.CrossPlatform.Cpuid;
-    using iTin.Core.Helpers.Enumerations;
-    using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
-
     /// <summary>
     /// The static class <see cref="CpuidLeafFactory"/> creates the <see cref="CPUID"/> leafs.
     /// </summary>

@@ -1,11 +1,11 @@
 ﻿
+using System.Diagnostics;
+
+using iTin.Core;
+using iTin.Core.Helpers.Enumerations;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Diagnostics;
-
-    using iTin.Core;
-    using iTin.Core.Helpers.Enumerations;
-
     // Leaf 0x80000001: Extended Processor Info And Features
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•

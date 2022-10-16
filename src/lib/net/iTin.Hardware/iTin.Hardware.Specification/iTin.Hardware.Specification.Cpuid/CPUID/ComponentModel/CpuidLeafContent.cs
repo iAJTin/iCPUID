@@ -1,12 +1,12 @@
 ﻿
+using System.Collections.Generic;
+
+using iTin.Core.Hardware.CrossPlatform.Cpuid;
+
+using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-
-    using iTin.Core.Hardware.CrossPlatform.Cpuid;
-
-    using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
-
     /// <summary>
     /// Defines the content of a leaf.
     /// </summary>

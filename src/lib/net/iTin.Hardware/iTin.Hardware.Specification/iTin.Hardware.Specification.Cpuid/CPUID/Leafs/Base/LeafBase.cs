@@ -1,17 +1,15 @@
 ﻿
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+
+using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
+using iTin.Core.Hardware.Common;
+using iTin.Core.Helpers;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Diagnostics;
-    using System.Linq;
-
-    using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
-    using iTin.Core.Hardware.Common;
-    using iTin.Core.Helpers;
-
-    using Specification;
-
     /// <summary>
     /// The <b>LeafBase</b> class provides functions to analyze the properties associated with a leaf <see cref="CPUID"/>.
     /// </summary>

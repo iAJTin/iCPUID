@@ -1,12 +1,12 @@
 ﻿
+using System;
+using System.Diagnostics;
+
+using iTin.Core;
+using iTin.Core.Helpers.Enumerations;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System;
-    using System.Diagnostics;
-
-    using iTin.Core;
-    using iTin.Core.Helpers.Enumerations;
-
     // Leaf 0x00000004: Deterministic Cache Parameters 
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•

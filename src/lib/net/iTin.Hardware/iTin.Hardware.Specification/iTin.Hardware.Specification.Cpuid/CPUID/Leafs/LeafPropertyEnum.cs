@@ -1,10 +1,10 @@
 ﻿
+using System.Collections.ObjectModel;
+
+using iTin.Core.Hardware.Common;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.ObjectModel;
-
-    using iTin.Core.Hardware.Common;
-
     #region [internal] (emun) Leaf00000000Property: Defines the properties available for the leaf 00000000 [Basic CPUID Information]
     /// <summary>
     /// Defines the properties available for the leaf 00000000 [Basic CPUID Information].

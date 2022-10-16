@@ -1,8 +1,8 @@
 ﻿
+using iTin.Core.ComponentModel;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using iTin.Core.ComponentModel;
-
     /// <summary>
     /// Defines the known leaf values
     /// </summary>

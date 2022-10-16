@@ -1,18 +1,18 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+
+using iTin.Core.Hardware.CrossPlatform.Cpuid;
+using iTin.Core.Helpers;
+
+using iTin.Hardware.Specification.Cpuid;
+
 namespace iTin.Hardware.Specification
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Text;
-
-    using iTin.Core.Hardware.CrossPlatform.Cpuid;
-    using iTin.Core.Helpers;
-
-    using Cpuid;
-
     /// <summary>
     /// CPUID—CPU Identification.<br/>
     /// CPUID returns processor identification and feature information.

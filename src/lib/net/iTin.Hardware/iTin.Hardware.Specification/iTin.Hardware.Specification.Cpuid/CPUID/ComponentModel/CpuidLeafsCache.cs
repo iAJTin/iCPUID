@@ -1,9 +1,9 @@
 ﻿
+using System.Collections.Generic;
+using System.Diagnostics;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-    using System.Diagnostics;
-
     /// <summary>
     /// The <see cref="CpuidLeafsCache"/> class represents the cache of available leafs for a particular type.
     /// </summary>

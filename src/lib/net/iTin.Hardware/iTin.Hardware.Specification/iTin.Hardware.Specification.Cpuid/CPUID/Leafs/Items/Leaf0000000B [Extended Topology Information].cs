@@ -1,8 +1,8 @@
 ﻿
+using System.Diagnostics;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Diagnostics;
-
     // Leaf 0x0000000B: Extended Topology Information
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•

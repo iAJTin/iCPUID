@@ -1,12 +1,12 @@
 ﻿
+using System.Diagnostics;
+
+using iTin.Core;
+using iTin.Core.Hardware.CrossPlatform.Cpuid;
+using iTin.Core.Helpers.Enumerations;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Diagnostics;
-
-    using iTin.Core;
-    using iTin.Core.Hardware.CrossPlatform.Cpuid;
-    using iTin.Core.Helpers.Enumerations;
-
     // Leaf 0x00000003: Processor Serial Number
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•

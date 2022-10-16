@@ -1,10 +1,10 @@
 ﻿
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-
     /// <summary>
     /// Represents a read-only collection of objects <see cref="LeafBase"/>.
     /// </summary>

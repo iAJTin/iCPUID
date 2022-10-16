@@ -1,15 +1,15 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+
+using iTin.Core;
+using iTin.Core.Helpers.Enumerations;
+using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-
-    using iTin.Core;
-    using iTin.Core.Helpers.Enumerations;
-    using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
-
     // Leaf 0x00000002: Cache and TLB Descriptor information
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•

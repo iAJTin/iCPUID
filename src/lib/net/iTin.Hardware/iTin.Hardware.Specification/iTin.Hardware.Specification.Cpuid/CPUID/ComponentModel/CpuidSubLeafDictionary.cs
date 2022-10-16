@@ -1,10 +1,10 @@
 ﻿
+using System.Collections.Generic;
+
+using iTin.Core.Hardware.Common;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-
-    using iTin.Core.Hardware.Common;
-
     /// <summary>
     /// Represents a dictionary for keys <see cref="SubLeaf"/> and values <see cref="PropertyItem"/>.
     /// </summary>

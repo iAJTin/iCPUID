@@ -1,10 +1,10 @@
 ﻿
+using System.Collections.ObjectModel;
+
+using iTin.Core.Hardware.Common;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.ObjectModel;
-
-    using iTin.Core.Hardware.Common;
-
     /// <summary>
     /// Defines available keys for the available leafs of a system.
     /// </summary>

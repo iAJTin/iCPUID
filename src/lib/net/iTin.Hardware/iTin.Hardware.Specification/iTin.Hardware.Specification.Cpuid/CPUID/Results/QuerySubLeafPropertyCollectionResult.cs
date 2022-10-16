@@ -1,10 +1,10 @@
 ﻿
+using System.Collections.Generic;
+
+using iTin.Core.ComponentModel;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Collections.Generic;
-
-    using iTin.Core.ComponentModel;
-
     /// <summary>
     /// Specialization of <see cref="ResultBase{T}"/> interface.<br/>
     /// Where <c>T</c> is <see cref="CpuidSubLeafDictionary"/>.<br/>

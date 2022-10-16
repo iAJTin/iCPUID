@@ -1,8 +1,8 @@
 ﻿
+using System.Diagnostics;
+
 namespace iTin.Hardware.Specification.Cpuid
 {
-    using System.Diagnostics;
-
     // Leaf 0x00000015: Time Stamp Counter and Nominal Core Crystal Clock Information
     //
     // •—INPUT—————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
