@@ -1,16 +1,16 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Cpuid;
+
 namespace iCPUID.ConsoleAppCore
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Linq;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Cpuid;
-
     class Program
     {
         static void Main(string[] args)

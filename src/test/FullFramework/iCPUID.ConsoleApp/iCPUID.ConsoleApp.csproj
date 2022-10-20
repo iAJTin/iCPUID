@@ -89,8 +89,8 @@
       <Project>{ce8ed8fb-0230-4de8-a77b-13ff189c7621}</Project>
       <Name>iTin.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\lib\net\iTin.Hardware\iTin.Hardware.Specification\iTin.Hardware.Specification.Cpuid\iTin.Hardware.Specification.Cpuid.csproj">
-      <Project>{0f1ae7ce-7d6b-4c4d-abef-8d85c6dd6976}</Project>
+    <ProjectReference Include="..\..\..\lib\net\iTin.Hardware\iTin.Hardware.Specification.Cpuid\iTin.Hardware.Specification.Cpuid.csproj">
+      <Project>{94391f2e-d57e-4284-8d57-fb8ee9730757}</Project>
       <Name>iTin.Hardware.Specification.Cpuid</Name>
     </ProjectReference>
   </ItemGroup>

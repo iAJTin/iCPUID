@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -12,7 +12,7 @@
     <Company>iTin</Company>
     <Product>iTin.Hardware.Specification.Cpuid</Product>
     <Description>iCPUID is a lightweight implementation that allows us to obtain CPUID information</Description>
-    <Copyright>Copyright © 2020</Copyright>
+    <Copyright>Copyright © 2022</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\iTin.Core.Hardware.Common.csproj" />
-    <ProjectReference Include="..\..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.CrossPlatform\iTin.Core.Hardware.CrossPlatform.Cpuid\iTin.Core.Hardware.CrossPlatform.Cpuid.csproj" />
-    <ProjectReference Include="..\..\..\iTin.Core\iTin.Core\iTin.Core.csproj" />
+    <ProjectReference Include="..\..\iTin.Core\iTin.Core\iTin.Core.csproj" />
+    <ProjectReference Include="..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.CrossPlatform\iTin.Core.Hardware.CrossPlatform.Cpuid\iTin.Core.Hardware.CrossPlatform.Cpuid.csproj" />
+    <ProjectReference Include="..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\iTin.Core.Hardware.Common.csproj" />
   </ItemGroup>
 
   <!--
