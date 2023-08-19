@@ -10,7 +10,11 @@ All notable changes to this project will be documented in this file.
 ### Added
 
   - Multiple Repository is used.
-   
+
+    In the image, I show my folder structure, in case it helps someone
+
+    ![multi-repo.png][mutli-repo] 
+ 
 ### Changed
   
  - Library versions for this version
@@ -269,3 +273,4 @@ https://github.com/iAJTin/iCPUID/blob/master/src/lib/rust/cpuid.md
 [1.0.0]: https://github.com/iAJTin/iCPUID/releases/tag/v1.0.0
 
 [help]: ./assets/help.png "help"
+[mutli-repo]: ./assets/multi-repo.png "folder structure"
