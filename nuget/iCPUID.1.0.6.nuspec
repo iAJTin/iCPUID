@@ -6,6 +6,7 @@
     <title>iCPUID</title>
     <authors>iAJTin</authors>
     <owners>iAJTin</owners>
+    <readme>.\README.md</readme>
     <license type="expression">MIT</license>
     <icon>.\iCPUID.png</icon>
     <projectUrl>https://github.com/iAJTin/iCPUID</projectUrl>
@@ -16,18 +17,15 @@
     <tags>CPUID CPU hardware iTin</tags>
     <repository type="git" url="https://github.com/iAJTin/iCPUID" commit="960c30a26b48edc875a6e10e252925cd423ae2f3" />
     <dependencies>
-      <group targetFramework="net461">
-      </group>
-      <group targetFramework="netstandard2.0">
-      </group>
-      <group targetFramework="netstandard2.1">
-      </group>
-      <group targetFramework="net60">
-      </group>
+      <group targetFramework="net461"></group>
+      <group targetFramework="netstandard2.0"></group>
+      <group targetFramework="netstandard2.1"></group>
+      <group targetFramework="net60"></group>
     </dependencies>
   </metadata>
   <files>
     <file src=".\iCPUID.png" target="." />
+    <file src=".\README.md" target="." />
     <file src="..\README.txt" target="." />  
     <file src="..\references\cpuid\cpuid_0_1_0\**" target="runtimes\" />
     <file src="..\src\lib\net\iTin.Hardware\iTin.Hardware.Specification.Cpuid\bin\Release\**" target="lib" exclude="**\*.deps.json;**\*.pdb;" />

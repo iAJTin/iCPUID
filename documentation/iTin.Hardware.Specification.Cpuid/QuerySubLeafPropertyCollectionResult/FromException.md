@@ -27,13 +27,13 @@ Creates a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 ```csharp
 public static QuerySubLeafPropertyCollectionResult FromException(Exception exception, 
-    CpuidSubLeafDictionary Result)
+    CpuidSubLeafDictionary result)
 ```
 
 | parameter | description |
 | --- | --- |
 | exception | Target exception. |
-| Result | Result Result |
+| result | Result Result |
 
 ## Return Value
 

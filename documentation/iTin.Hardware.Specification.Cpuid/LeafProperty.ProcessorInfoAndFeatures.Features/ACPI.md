@@ -7,7 +7,7 @@ Thermal Monitor and Software Controlled Clock Facilities. The processor implemen
 Key Composition
 
 * Leaf: ProcessorInfoAndFeatures
-* Property: DS
+* Property: ACPI
 * Unit: None
 
 Return Value

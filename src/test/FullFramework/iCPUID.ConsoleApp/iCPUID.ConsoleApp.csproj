@@ -81,12 +81,12 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\lib\net\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\iTin.Core.Hardware.Common.csproj">
-      <Project>{4ebbf996-530f-46b6-aad2-272741cbb809}</Project>
+    <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj">
+      <Project>{3B682236-4627-4493-AD63-459703CF0AF8}</Project>
       <Name>iTin.Core.Hardware.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\lib\net\iTin.Core\iTin.Core\iTin.Core.csproj">
-      <Project>{ce8ed8fb-0230-4de8-a77b-13ff189c7621}</Project>
+    <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core\src\iTin.Core.csproj">
+      <Project>{ADE5D508-BA17-4757-B7E2-8CDFAF151140}</Project>
       <Name>iTin.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\lib\net\iTin.Hardware\iTin.Hardware.Specification.Cpuid\iTin.Hardware.Specification.Cpuid.csproj">

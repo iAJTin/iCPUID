@@ -11,7 +11,7 @@ public class QuerySubLeafPropertyCollectionResult : ResultBase<CpuidSubLeafDicti
 | name | description |
 | --- | --- |
 | [QuerySubLeafPropertyCollectionResult](QuerySubLeafPropertyCollectionResult/QuerySubLeafPropertyCollectionResult.md)() | The default constructor. |
-| static [CreateErroResult](QuerySubLeafPropertyCollectionResult/CreateErroResult.md)(…) | Returns a new [`QuerySubLeafPropertyCollectionResult`](./QuerySubLeafPropertyCollectionResult.md) with specified detailed error. (4 methods) |
+| static [CreateErrorResult](QuerySubLeafPropertyCollectionResult/CreateErrorResult.md)(…) | Returns a new [`QuerySubLeafPropertyCollectionResult`](./QuerySubLeafPropertyCollectionResult.md) with specified detailed error. (4 methods) |
 | static [CreateSuccessResult](QuerySubLeafPropertyCollectionResult/CreateSuccessResult.md)(…) | Returns a new success result. |
 | static [FromException](QuerySubLeafPropertyCollectionResult/FromException.md)(…) | Creates a new [`QuerySubLeafPropertyCollectionResult`](./QuerySubLeafPropertyCollectionResult.md) instance from known exception. (2 methods) |
 

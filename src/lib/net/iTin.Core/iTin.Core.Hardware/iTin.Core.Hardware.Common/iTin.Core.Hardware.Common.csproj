@@ -16,8 +16,4 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\iTin.Core\iTin.Core.csproj" />
-  </ItemGroup>
-
 </Project>

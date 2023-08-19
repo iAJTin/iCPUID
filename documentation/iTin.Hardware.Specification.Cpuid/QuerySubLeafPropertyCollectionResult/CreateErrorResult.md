@@ -1,9 +1,9 @@
-# QuerySubLeafPropertyCollectionResult.CreateErroResult method (1 of 4)
+# QuerySubLeafPropertyCollectionResult.CreateErrorResult method (1 of 4)
 
 Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors collection.
 
 ```csharp
-public static QuerySubLeafPropertyCollectionResult CreateErroResult(IResultError[] errors)
+public static QuerySubLeafPropertyCollectionResult CreateErrorResult(IResultError[] errors)
 ```
 
 | parameter | description |
@@ -21,19 +21,19 @@ A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 ---
 
-# QuerySubLeafPropertyCollectionResult.CreateErroResult method (2 of 4)
+# QuerySubLeafPropertyCollectionResult.CreateErrorResult method (2 of 4)
 
 Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors collection.
 
 ```csharp
-public static QuerySubLeafPropertyCollectionResult CreateErroResult(IResultError[] errors, 
-    CpuidSubLeafDictionary Result)
+public static QuerySubLeafPropertyCollectionResult CreateErrorResult(IResultError[] errors, 
+    CpuidSubLeafDictionary result)
 ```
 
 | parameter | description |
 | --- | --- |
 | errors | A errors collection |
-| Result | Result Result |
+| result | Result Result |
 
 ## Return Value
 
@@ -47,12 +47,12 @@ A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 ---
 
-# QuerySubLeafPropertyCollectionResult.CreateErroResult method (3 of 4)
+# QuerySubLeafPropertyCollectionResult.CreateErrorResult method (3 of 4)
 
 Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed error.
 
 ```csharp
-public static QuerySubLeafPropertyCollectionResult CreateErroResult(string message, 
+public static QuerySubLeafPropertyCollectionResult CreateErrorResult(string message, 
     string code = "")
 ```
 
@@ -72,19 +72,19 @@ A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 ---
 
-# QuerySubLeafPropertyCollectionResult.CreateErroResult method (4 of 4)
+# QuerySubLeafPropertyCollectionResult.CreateErrorResult method (4 of 4)
 
 Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed error.
 
 ```csharp
-public static QuerySubLeafPropertyCollectionResult CreateErroResult(string message, 
-    CpuidSubLeafDictionary Result, string code = "")
+public static QuerySubLeafPropertyCollectionResult CreateErrorResult(string message, 
+    CpuidSubLeafDictionary result, string code = "")
 ```
 
 | parameter | description |
 | --- | --- |
 | message | Error message |
-| Result | Result Result |
+| result | Result Result |
 | code | Error code |
 
 ## Return Value

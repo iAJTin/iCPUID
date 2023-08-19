@@ -4,12 +4,12 @@ Returns a new success result.
 
 ```csharp
 public static QuerySubLeafPropertyCollectionResult CreateSuccessResult(
-    CpuidSubLeafDictionary Result)
+    CpuidSubLeafDictionary result)
 ```
 
 | parameter | description |
 | --- | --- |
-| Result | Result Result |
+| result | Result Result |
 
 ## Return Value
 

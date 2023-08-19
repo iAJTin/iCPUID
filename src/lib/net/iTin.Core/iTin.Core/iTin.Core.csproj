@@ -17,8 +17,4 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\iTin.Logging\iTin.Logging\iTin.Logging.csproj" />
-  </ItemGroup>
-
 </Project>
