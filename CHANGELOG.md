@@ -6,7 +6,11 @@ All notable changes to this project will be documented in this file.
 ### Fixes
 
  - Fix **ACPI** property key documentation in **Features** section of **ProcessorInfoAndFeatures** leaf.
- 
+
+### Added
+
+  - Multiple Repository is used.
+   
 ### Changed
   
  - Library versions for this version
