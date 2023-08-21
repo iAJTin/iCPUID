@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj" />
     <ProjectReference Include="..\..\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.CrossPlatform\iTin.Core.Hardware.CrossPlatform.Cpuid\iTin.Core.Hardware.CrossPlatform.Cpuid.csproj" />
   </ItemGroup>
 

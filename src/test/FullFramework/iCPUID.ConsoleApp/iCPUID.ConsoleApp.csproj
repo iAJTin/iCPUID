@@ -81,8 +81,8 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj">
-      <Project>{3B682236-4627-4493-AD63-459703CF0AF8}</Project>
+    <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj">
+      <Project>{7fd11bc8-5b3b-4ca4-85a1-5f90ca3495c0}</Project>
       <Name>iTin.Core.Hardware.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core\src\iTin.Core.csproj">
@@ -90,7 +90,7 @@
       <Name>iTin.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\lib\net\iTin.Hardware\iTin.Hardware.Specification.Cpuid\iTin.Hardware.Specification.Cpuid.csproj">
-      <Project>{94391f2e-d57e-4284-8d57-fb8ee9730757}</Project>
+      <Project>{94391F2E-D57E-4284-8D57-FB8EE9730757}</Project>
       <Name>iTin.Hardware.Specification.Cpuid</Name>
     </ProjectReference>
   </ItemGroup>
