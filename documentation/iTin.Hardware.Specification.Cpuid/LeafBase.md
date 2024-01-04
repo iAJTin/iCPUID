@@ -14,14 +14,14 @@ public abstract class LeafBase
 | [Leaf](LeafBase/Leaf.md) { get; } | Gets the [`Leaf`](./LeafBase/Leaf.md) value. |
 | [SubLeaf](LeafBase/SubLeaf.md) { get; } | Gets the [`SubLeaf`](./LeafBase/SubLeaf.md) value. |
 | [GetProperty](LeafBase/GetProperty.md)(…) | Returns the value of specified property. Always returns the first appearance of the property. |
-| override [ToString](LeafBase/ToString.md)() | Returns a String that represents this instance. |
+| override [ToString](LeafBase/ToString.md)() |  |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
 | [LeafBase](LeafBase/LeafBase.md)(…) | Initializes a new instance of the class [`LeafBase`](./LeafBase.md). |
-| [InvokeResult](LeafBase/InvokeResult.md) { get; set; } | Gets or sets the result of executes the CPUID instruction with given leaf and optional subleaf. |
+| [InvokeResult](LeafBase/InvokeResult.md) { get; set; } | Gets or sets the result of executes the CPUID instruction with given leaf and optional sub-leaf. |
 | virtual [PopulateProperties](LeafBase/PopulateProperties.md)(…) | Populates the property collection for this leaf. |
 
 ## See Also

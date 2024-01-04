@@ -118,7 +118,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Processor Info and Feature Bits</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Processor Info and Feature Bits</strong>.
 /// </summary>
 internal sealed class Leaf00000001 : LeafBase
 {
@@ -126,7 +126,7 @@ internal sealed class Leaf00000001 : LeafBase
 
     #region register ECX definition
     [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits SSE3 = Bits.Bit00;         // 00 - SSE3 extensions
-    [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits PCLMULQDQ = Bits.Bit01;    // 01 - Instrucción PCLMULQDQ
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits PCLMULQDQ = Bits.Bit01;    // 01 - PCLMULQDQ instruction
     [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits DTES64 = Bits.Bit02;       // 02 - DTES64
     [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits MONITOR = Bits.Bit03;      // 03 - MONITOR/MWAIT instructions
     [DebuggerBrowsable(DebuggerBrowsableState.Never)] private const Bits DS_CPL = Bits.Bit04;       // 04 - CPL Qualified Debug Store
@@ -203,7 +203,8 @@ internal sealed class Leaf00000001 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000001(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000001(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -212,7 +213,7 @@ internal sealed class Leaf00000001 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Cpu Signature</b> field.
+    /// Gets a value representing the <strong>CPU Signature</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -221,7 +222,7 @@ internal sealed class Leaf00000001 : LeafBase
     private string CpuSignature => $"{InvokeResult.eax:X8}";
 
     /// <summary>
-    /// Gets a value representing the <b>Brand Index</b> field.
+    /// Gets a value representing the <strong>Brand Index</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -230,7 +231,7 @@ internal sealed class Leaf00000001 : LeafBase
     private byte BrandIndex => InvokeResult.ebx.GetByte(Bytes.Byte00);
 
     /// <summary>
-    /// Gets a value representing the <b>CLFLUSH Cache Line Size</b> field.
+    /// Gets a value representing the <strong>CLFLUSH Cache Line Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -239,7 +240,7 @@ internal sealed class Leaf00000001 : LeafBase
     private byte CLFLUSH_CacheLineSize => InvokeResult.ebx.GetByte(Bytes.Byte01);
 
     /// <summary>
-    /// Gets a value representing the <b>Local APIC ID</b> field.
+    /// Gets a value representing the <strong>Local APIC ID</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

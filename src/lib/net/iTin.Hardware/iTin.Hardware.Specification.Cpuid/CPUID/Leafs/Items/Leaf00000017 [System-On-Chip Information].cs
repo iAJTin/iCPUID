@@ -70,7 +70,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>System-On-Chip Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>System-On-Chip Information</strong>.
 /// </summary>
 internal sealed class Leaf00000017 : LeafBase
 {
@@ -95,7 +95,8 @@ internal sealed class Leaf00000017 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000017(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000017(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -104,7 +105,7 @@ internal sealed class Leaf00000017 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>MaxSOCID</b> field.
+    /// Gets a value representing the <strong>MaxSOCID</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -113,7 +114,7 @@ internal sealed class Leaf00000017 : LeafBase
     private uint MaxSOCID => InvokeResult.eax;
 
     /// <summary>
-    /// Gets a value representing the <b>SOC Vendor Id</b> field.
+    /// Gets a value representing the <strong>SOC Vendor Id</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -122,7 +123,7 @@ internal sealed class Leaf00000017 : LeafBase
     private uint SocVendorId => InvokeResult.ebx & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Project ID</b> field.
+    /// Gets a value representing the <strong>Project ID</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -131,7 +132,7 @@ internal sealed class Leaf00000017 : LeafBase
     private uint ProjectID => InvokeResult.ecx;
 
     /// <summary>
-    /// Gets a value representing the <b>Stepping ID</b> field.
+    /// Gets a value representing the <strong>Stepping ID</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -140,7 +141,7 @@ internal sealed class Leaf00000017 : LeafBase
     private uint SteppingID => InvokeResult.edx;
 
     /// <summary>
-    /// Gets a value representing the <b>Processor Brand String</b> field.
+    /// Gets a value representing the <strong>Processor Brand String</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

@@ -62,7 +62,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Thermal and Power Management</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Thermal and Power Management</strong>.
 /// </summary>
 internal sealed class Leaf00000006 : LeafBase
 {
@@ -105,7 +105,8 @@ internal sealed class Leaf00000006 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000006(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000006(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -114,7 +115,7 @@ internal sealed class Leaf00000006 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Interrupt Number Thresholds</b> field.
+    /// Gets a value representing the <strong>Interrupt Number Thresholds</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

@@ -28,7 +28,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>AMD Easter Egg</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>AMD Easter Egg</strong>.
 /// </summary>
 internal sealed class Leaf8FFFFFFFF : LeafBase
 {
@@ -39,7 +39,8 @@ internal sealed class Leaf8FFFFFFFF : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf8FFFFFFFF(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf8FFFFFFFF(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -48,7 +49,7 @@ internal sealed class Leaf8FFFFFFFF : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>AMD Easter Egg String</b> field. 
+    /// Gets a value representing the <strong>AMD Easter Egg String</strong> field. 
     /// </summary>
     /// <value>
     /// Property value.

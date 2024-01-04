@@ -10,15 +10,19 @@ namespace iTin.Hardware.Specification.Cpuid;
 internal sealed class CpuidLeafsCache
 {
     #region private readonly members
+
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private readonly Dictionary<Leaf, CpuidSubLeafCollection> _leafDictionary;
+
     #endregion
 
     #region public static readonly memebrs
+
     /// <summary>
     /// Gets a reference to the available leafs cache.
     /// </summary>
     public static readonly CpuidLeafsCache Cache = new();
+
     #endregion
 
     #region constructor/s
@@ -28,7 +32,7 @@ internal sealed class CpuidLeafsCache
     /// </summary>
     private CpuidLeafsCache()
     {
-        _leafDictionary = new Dictionary<Leaf, CpuidSubLeafCollection>();
+        _leafDictionary = new();
     }
 
     #endregion

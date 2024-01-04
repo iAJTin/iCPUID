@@ -51,7 +51,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Extended Processor Info And Features</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Extended Processor Info And Features</strong>.
 /// </summary>
 internal sealed class Leaf80000001 : LeafBase
 {
@@ -80,7 +80,8 @@ internal sealed class Leaf80000001 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000001(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000001(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main)
+        : base(data, subLeaf)
     {
     }
 

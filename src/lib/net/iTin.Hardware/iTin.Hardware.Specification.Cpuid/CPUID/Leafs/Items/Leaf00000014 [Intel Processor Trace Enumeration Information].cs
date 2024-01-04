@@ -87,7 +87,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Intel Processor Trace Enumeration Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Intel Processor Trace Enumeration Information</strong>.
 /// </summary>
 internal sealed class Leaf00000014 : LeafBase
 {
@@ -127,7 +127,8 @@ internal sealed class Leaf00000014 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000014(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000014(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -136,7 +137,7 @@ internal sealed class Leaf00000014 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum sub-leafs</b> field.
+    /// Gets a value representing the <strong>Maximum sub-leafs</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -145,7 +146,7 @@ internal sealed class Leaf00000014 : LeafBase
     private uint MaximumSubLeafs => InvokeResult.eax;
 
     /// <summary>
-    /// Gets a value representing the <b>Number Of Configurable Address</b> field.
+    /// Gets a value representing the <strong>Number Of Configurable Address</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -154,7 +155,7 @@ internal sealed class Leaf00000014 : LeafBase
     private uint NumberConfigurableAddress => InvokeResult.eax & 0x7;
 
     /// <summary>
-    /// Gets a value representing the <b>Bitmap of supported MTC period encodings</b> field.
+    /// Gets a value representing the <strong>Bitmap of supported MTC period encodings</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -163,7 +164,7 @@ internal sealed class Leaf00000014 : LeafBase
     private uint BitmapMTC => (InvokeResult.eax >> 10) & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Bitmap of supported Cycle Threshold value encodings</b> field.
+    /// Gets a value representing the <strong>Bitmap of supported Cycle Threshold value encodings</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -172,7 +173,7 @@ internal sealed class Leaf00000014 : LeafBase
     private uint BitmapCycle => InvokeResult.ebx & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Bitmap of supported Configurable PSB frequency encodings.</b> field.
+    /// Gets a value representing the <strong>Bitmap of supported Configurable PSB frequency encodings.</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

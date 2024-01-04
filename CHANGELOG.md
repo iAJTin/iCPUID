@@ -1,7 +1,7 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
-## 1.0.6 -
+## 1.0.6 - 2024-04-01
 
 ### Fixes
 
@@ -21,11 +21,11 @@ All notable changes to this project will be documented in this file.
   
     | Library | Version | Description|
     |:--------|:--------|:-----------|
-    |iTin.Core| **2.0.0.7** | Base library containing various extensions, helpers, common constants |
-    |iTin.Core.Hardware.Common| **1.0.0.5** | Common Hardware Infrastructure |
-    |iTin.Core.Hardware.CrossPlatform.Cpuid | **1.0.0.1** | Cross-Platform Generic Hardware Calls (CPUID) |
-    |iTin.Core.Interop.CrossPlatform.Cpuid | **1.0.0.1** |Generic Cross-Platform Interop Calls (CPUID) |
-    |iTin.Core.Interop.Shared| **1.0.0.4** | Generic Shared Interop Definitions, Data Structures, Constants... |
+    |iTin.Core| **2.0.0.8** | Base library containing various extensions, helpers, common constants |
+    |iTin.Core.Hardware.Common| **1.0.0.6** | Common Hardware Infrastructure |
+    |iTin.Core.Hardware.CrossPlatform.Cpuid | **1.0.0.2** | Cross-Platform Generic Hardware Calls (CPUID) |
+    |iTin.Core.Interop.CrossPlatform.Cpuid | **1.0.0.2** |Generic Cross-Platform Interop Calls (CPUID) |
+    |iTin.Core.Interop.Shared| **1.0.0.5** | Generic Shared Interop Definitions, Data Structures, Constants... |
     |iTin.Hardware.Specification.Cpuid | **1.0.0.3** | CPUID Specification Implementation |
     |iTin.Logging | **1.0.0.3** | Logging library |
  

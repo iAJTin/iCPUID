@@ -36,7 +36,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Extended L2 Cache Features</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Extended L2 Cache Features</strong>.
 /// </summary>
 internal sealed class Leaf80000006 : LeafBase
 {
@@ -55,7 +55,8 @@ internal sealed class Leaf80000006 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000006(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000006(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -64,7 +65,7 @@ internal sealed class Leaf80000006 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Cache Line Size</b> field.
+    /// Gets a value representing the <strong>Cache Line Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -73,7 +74,7 @@ internal sealed class Leaf80000006 : LeafBase
     private byte CacheLineSize => InvokeResult.ecx.GetByte(Bytes.Byte00);
 
     /// <summary>
-    /// Gets a value representing the <b>Cache Size</b> field.
+    /// Gets a value representing the <strong>Cache Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

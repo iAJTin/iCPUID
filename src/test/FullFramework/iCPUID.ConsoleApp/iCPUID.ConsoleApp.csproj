@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>iCPUID.ConsoleApp</RootNamespace>
     <AssemblyName>iCPUID.ConsoleApp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -81,8 +81,8 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj">
-      <Project>{7fd11bc8-5b3b-4ca4-85a1-5f90ca3495c0}</Project>
+    <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core.Hardware\iTin.Core.Hardware.Common\src\iTin.Core.Hardware.Common.csproj">
+      <Project>{8A97A25B-0AF9-400A-93A0-D88D7FF38C55}</Project>
       <Name>iTin.Core.Hardware.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\iTin\iTin.Core\iTin.Core\src\iTin.Core.csproj">

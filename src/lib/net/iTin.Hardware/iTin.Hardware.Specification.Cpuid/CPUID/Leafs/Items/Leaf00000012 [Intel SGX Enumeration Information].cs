@@ -125,7 +125,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Intel SGX Enumeration Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Intel SGX Enumeration Information</strong>.
 /// </summary>
 internal sealed class Leaf00000012 : LeafBase
 {
@@ -157,7 +157,8 @@ internal sealed class Leaf00000012 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000012(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000012(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main)
+        : base(data, subLeaf)
     {
     }
 
@@ -166,7 +167,7 @@ internal sealed class Leaf00000012 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>MaxEnclaveSize_Not64</b> field.
+    /// Gets a value representing the <strong>MaxEnclaveSize_Not64</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -175,7 +176,7 @@ internal sealed class Leaf00000012 : LeafBase
     private uint MaxEnclaveSize_Not64 => InvokeResult.edx & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>MaxEnclaveSize_64</b> field.
+    /// Gets a value representing the <strong>MaxEnclaveSize_64</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -184,7 +185,7 @@ internal sealed class Leaf00000012 : LeafBase
     private uint MaxEnclaveSize_64 => (InvokeResult.edx >> 0x08) & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>SECS ATTRIBUTES ADDRESS</b> field.
+    /// Gets a value representing the <strong>SECS ATTRIBUTES ADDRESS</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -193,7 +194,7 @@ internal sealed class Leaf00000012 : LeafBase
     private string SecsAttributesAddress => $"{InvokeResult.edx:X8}{InvokeResult.ecx:X8}{InvokeResult.ebx:X8}{InvokeResult.eax:X8}";
 
     /// <summary>
-    /// Gets a value representing the <b>Sub Leaf Type</b> field.
+    /// Gets a value representing the <strong>Sub Leaf Type</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -202,7 +203,7 @@ internal sealed class Leaf00000012 : LeafBase
     private uint SubLeafType => InvokeResult.eax & 0x0f;
 
     /// <summary>
-    /// Gets a value representing the <b>Physical Address EPC Section</b> field.
+    /// Gets a value representing the <strong>Physical Address EPC Section</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -211,7 +212,7 @@ internal sealed class Leaf00000012 : LeafBase
     private string PhysicalAddressEpcSection => $"{InvokeResult.ebx & 0xfffff}{(InvokeResult.eax >> 0x0c) & 0xfffff}";
 
     /// <summary>
-    /// Gets a value representing the <b>EPC Section Size</b> field.
+    /// Gets a value representing the <strong>EPC Section Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -220,7 +221,7 @@ internal sealed class Leaf00000012 : LeafBase
     private ulong EpcSectionSize => CreateUnsignedLongFromValues(InvokeResult.edx & 0xfffff, (InvokeResult.ecx >> 0x0c) & 0xfffff);
 
     /// <summary>
-    /// Gets a value representing the <b>EPC Section Encoding</b> field.
+    /// Gets a value representing the <strong>EPC Section Encoding</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -289,10 +290,10 @@ internal sealed class Leaf00000012 : LeafBase
     private static string GetEpcSectionEncoding(byte code)
     {
         string[] epcSectionEncoding =
-        {
+        [
             "No encoding information",
             "This section has confidentiality and integrity protection"
-        };
+        ];
 
         return code > 0x01
             ? "Reserved"

@@ -66,7 +66,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Intel Resource Director Technology (Intel RDT) Monitoring Enumeration Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Intel Resource Director Technology (Intel RDT) Monitoring Enumeration Information</strong>.
 /// </summary>
 internal sealed class Leaf0000000F : LeafBase
 {
@@ -103,7 +103,8 @@ internal sealed class Leaf0000000F : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf0000000F(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf0000000F(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -112,7 +113,7 @@ internal sealed class Leaf0000000F : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum range</b> field.
+    /// Gets a value representing the <strong>Maximum range</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -121,7 +122,7 @@ internal sealed class Leaf0000000F : LeafBase
     private uint MaximumRangeAllTypes => InvokeResult.ebx;
 
     /// <summary>
-    /// Gets a value representing the <b>Conversion factor from reported IA32_QM_CTR</b> field.
+    /// Gets a value representing the <strong>Conversion factor from reported IA32_QM_CTR</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -130,7 +131,7 @@ internal sealed class Leaf0000000F : LeafBase
     private uint ConversionFactorThis => InvokeResult.ebx;
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum range</b> field.
+    /// Gets a value representing the <strong>Maximum range</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

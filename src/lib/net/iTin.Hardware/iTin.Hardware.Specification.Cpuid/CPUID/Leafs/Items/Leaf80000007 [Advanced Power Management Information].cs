@@ -36,7 +36,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Advanced Power Management Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Advanced Power Management Information</strong>.
 /// </summary>
 internal sealed class Leaf80000007 : LeafBase
 {
@@ -55,7 +55,8 @@ internal sealed class Leaf80000007 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000007(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000007(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -64,7 +65,7 @@ internal sealed class Leaf80000007 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Invariant TSC</b> field.
+    /// Gets a value representing the <strong>Invariant TSC</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

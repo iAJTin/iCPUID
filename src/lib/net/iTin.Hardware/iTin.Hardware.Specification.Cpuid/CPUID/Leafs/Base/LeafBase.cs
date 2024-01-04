@@ -16,11 +16,13 @@ namespace iTin.Hardware.Specification.Cpuid;
 public abstract class LeafBase
 {
     #region private readonly members
+
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private readonly CpuidLeafContent _content;
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private readonly CpuidPropertiesTable _cpuidPropertiesTable = new();
+
     #endregion
 
     #region constructor/s
@@ -70,13 +72,13 @@ public abstract class LeafBase
 
     #endregion
 
-    #region protected readonly properties
+    #region protected properties
 
     /// <summary>
-    /// Gets or sets the result of executes the <b>CPUID</b> instruction with given leaf and optional subleaf.
+    /// Gets or sets the result of executes the <b>CPUID</b> instruction with given leaf and optional sub-leaf.
     /// </summary>
     /// <value>
-    /// A <see cref="CpuidResult"/> structure which contains the result of executes the <b>CPUID</b> instruction with given leaf and optional subleaf.
+    /// A <see cref="CpuidResult"/> structure which contains the result of executes the <b>CPUID</b> instruction with given leaf and optional sub-leaf.
     /// </value>
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     protected CpuidResult InvokeResult { get; set; }
@@ -91,49 +93,44 @@ public abstract class LeafBase
     /// <param name="propertyKey">Key to the property to obtain</param>
     /// <returns>
     /// <para>
-    /// A <see cref="QueryPropertyResult"/> reference that contains the result of the operation, to check if the operation is correct, the <b>Success</b>
-    /// property will be <b>true</b> and the <b>Value</b> property will contain the value; Otherwise, the the <b>Success</b> property
-    /// will be false and the <b>Errors</b> property will contain the errors associated with the operation, if they have been filled in.
+    /// A <see cref="QueryPropertyResult"/> reference that contains the result of the operation, to check if the operation is correct, the <strong>Success</strong>
+    /// property will be <see langword="true"/> and the <strong>Value</strong> property will contain the value; otherwise, the <strong>Success</strong> property
+    /// will be false and the <strong>Errors</strong> property will contain the errors associated with the operation, if they have been filled in.
     /// </para>
     /// <para>
-    /// The type of the <b>Value</b> property is <see cref="PropertyItem"/>. Contains the result of the operation.
+    /// The type of the <strong>Value</strong> property is <see cref="PropertyItem"/>. Contains the result of the operation.
     /// </para>
     /// <para>
     /// </para>
     /// </returns>
     public QueryPropertyResult GetProperty(IPropertyKey propertyKey)
     {
-        object result = _cpuidPropertiesTable[propertyKey];
+        var result = _cpuidPropertiesTable[propertyKey];
         if (result is not List<PropertyItem> itemList)
         {
-            return QueryPropertyResult.CreateErroResult("Can not found specified property key");
+            return QueryPropertyResult.CreateErrorResult("Can not found specified property key");
         }
 
-        bool hasItems = itemList.Any();
+        var hasItems = itemList.Any();
         if (!hasItems)
         {
-            return QueryPropertyResult.CreateErroResult("Can not found specified property key");
+            return QueryPropertyResult.CreateErrorResult("Can not found specified property key");
         }
 
-        bool onlyOneItem = itemList.Count == 1;
+        var onlyOneItem = itemList.Count == 1;
         if (onlyOneItem)
         {
             return QueryPropertyResult.CreateSuccessResult(itemList.FirstOrDefault());
         }
 
-        return QueryPropertyResult.CreateErroResult("Can not found specified property key");
+        return QueryPropertyResult.CreateErrorResult("Can not found specified property key");
     }
 
     #endregion
 
     #region public override methods
 
-    /// <summary>
-    /// Returns a <see cref="string"/> that represents this instance.
-    /// </summary>
-    /// <returns>
-    /// A <see cref="string"/> that represents this instance.
-    /// </returns>
+    /// <inheritdoc/>
     public override string ToString() => $"SubLeaf={SubLeaf}";
 
     #endregion
@@ -189,7 +186,7 @@ public abstract class LeafBase
     /// <summary>
     /// Convert a <see cref="int"/> into <see cref="string"/>.
     /// </summary>
-    /// <param name="value">Valor a convertir.</param>
+    /// <param name="value">Value to convert.</param>
     /// <returns>
     /// Returns <see cref="string"/> value.
     /// </returns>

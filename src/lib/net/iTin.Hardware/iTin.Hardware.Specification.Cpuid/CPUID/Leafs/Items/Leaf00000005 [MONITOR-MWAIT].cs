@@ -58,7 +58,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>MONITOR/MWAIT</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>MONITOR/MWAIT</strong>.
 /// </summary>
 internal sealed class Leaf00000005 : LeafBase
 {
@@ -78,7 +78,8 @@ internal sealed class Leaf00000005 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000005(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000005(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main)
+        : base(data, subLeaf)
     {
     }
 
@@ -87,7 +88,7 @@ internal sealed class Leaf00000005 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>C0</b> field.
+    /// Gets a value representing the <strong>C0</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -96,7 +97,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C0 => InvokeResult.edx.GetByte(Bytes.Byte00).ToArray()[0];
 
     /// <summary>
-    /// Gets a value representing the <b>C1</b> field.
+    /// Gets a value representing the <strong>C1</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -105,7 +106,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C1 => InvokeResult.edx.GetByte(Bytes.Byte00).ToArray()[1];
 
     /// <summary>
-    /// Gets a value representing the <b>C2</b> field.
+    /// Gets a value representing the <strong>C2</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -114,7 +115,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C2 => InvokeResult.edx.GetByte(Bytes.Byte01).ToArray()[0];
 
     /// <summary>
-    /// Gets a value representing the <b>C3</b> field.
+    /// Gets a value representing the <strong>C3</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -123,7 +124,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C3 => InvokeResult.edx.GetByte(Bytes.Byte01).ToArray()[1];
 
     /// <summary>
-    /// Gets a value representing the <b>C4</b> field.
+    /// Gets a value representing the <strong>C4</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -132,7 +133,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C4 => InvokeResult.edx.GetByte(Bytes.Byte02).ToArray()[0];
 
     /// <summary>
-    /// Gets a value representing the <b>C5</b> field.
+    /// Gets a value representing the <strong>C5</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -141,7 +142,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C5 => InvokeResult.edx.GetByte(Bytes.Byte02).ToArray()[1];
 
     /// <summary>
-    /// Gets a value representing the <b>C6</b> field.
+    /// Gets a value representing the <strong>C6</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -150,7 +151,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C6 => InvokeResult.edx.GetByte(Bytes.Byte03).ToArray()[0];
 
     /// <summary>
-    /// Gets a value representing the <b>C7</b> field.
+    /// Gets a value representing the <strong>C7</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -159,7 +160,7 @@ internal sealed class Leaf00000005 : LeafBase
     private byte C7 => InvokeResult.edx.GetByte(Bytes.Byte03).ToArray()[1];
 
     /// <summary>
-    /// Gets a value representing the <b>Smallest monitor-line size</b> field.
+    /// Gets a value representing the <strong>Smallest monitor-line size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -168,7 +169,7 @@ internal sealed class Leaf00000005 : LeafBase
     private uint SmallestMonitorLineSize => InvokeResult.eax & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Largest monitor-line size</b> field.
+    /// Gets a value representing the <strong>Largest monitor-line size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

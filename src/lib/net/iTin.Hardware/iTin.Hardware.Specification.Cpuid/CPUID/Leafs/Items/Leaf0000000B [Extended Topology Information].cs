@@ -68,7 +68,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Extended Topology Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Extended Topology Information</strong>.
 /// </summary>
 internal sealed class Leaf0000000B : LeafBase
 {
@@ -79,7 +79,8 @@ internal sealed class Leaf0000000B : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf0000000B(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf0000000B(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main)
+        : base(data, subLeaf)
     {
     }
 
@@ -88,7 +89,7 @@ internal sealed class Leaf0000000B : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Bits Shift Right x2APIC ID</b> field.
+    /// Gets a value representing the <strong>Bits Shift Right x2APIC ID</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -97,7 +98,7 @@ internal sealed class Leaf0000000B : LeafBase
     private uint BitsShiftRightx2APICID => InvokeResult.eax & 0x1f;
 
     /// <summary>
-    /// Gets a value representing the <b>Number Of Logical Processors This Level</b> field.
+    /// Gets a value representing the <strong>Number Of Logical Processors This Level</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -106,7 +107,7 @@ internal sealed class Leaf0000000B : LeafBase
     private uint NumberOfLogicalProcessorsThisLevel => InvokeResult.ebx & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Level Number</b> field.
+    /// Gets a value representing the <strong>Level Number</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -115,7 +116,7 @@ internal sealed class Leaf0000000B : LeafBase
     private uint LevelNumber => InvokeResult.ecx & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>x2APIC ID</b> field.
+    /// Gets a value representing the <strong>x2APIC ID</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -154,11 +155,11 @@ internal sealed class Leaf0000000B : LeafBase
     private static string GetLevelType(uint code)
     {
         string[] levelType =
-        {
+        [
             "Invalid",
             "SMT",
             "Core"
-        };
+        ];
 
         return code > 0x02
             ? "Reserved"

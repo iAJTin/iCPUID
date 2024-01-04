@@ -38,7 +38,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Time Stamp Counter and Nominal Core Crystal Clock Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Time Stamp Counter and Nominal Core Crystal Clock Information</strong>.
 /// </summary>
 internal sealed class Leaf00000015 : LeafBase
 {
@@ -49,7 +49,8 @@ internal sealed class Leaf00000015 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000015(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000015(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -58,7 +59,7 @@ internal sealed class Leaf00000015 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Denominator of the TSC/core crystal clock ratio</b> field.
+    /// Gets a value representing the <strong>Denominator of the TSC/core crystal clock ratio</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -67,7 +68,7 @@ internal sealed class Leaf00000015 : LeafBase
     private uint Denominator => InvokeResult.eax;
 
     /// <summary>
-    /// Gets a value representing the <b>Numerator of the TSC/core crystal clock ratio</b> field.
+    /// Gets a value representing the <strong>Numerator of the TSC/core crystal clock ratio</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -76,7 +77,7 @@ internal sealed class Leaf00000015 : LeafBase
     private uint Numerator => InvokeResult.ebx;
 
     /// <summary>
-    /// Gets a value representing the <b>Nominal Frequency in Hz</b> field.
+    /// Gets a value representing the <strong>Nominal Frequency in Hz</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

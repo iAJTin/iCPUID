@@ -72,7 +72,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Deterministic Cache Parameters</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Deterministic Cache Parameters</strong>.
 /// </summary>
 internal sealed class Leaf00000004 : LeafBase
 {
@@ -102,7 +102,8 @@ internal sealed class Leaf00000004 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000004(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000004(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -111,7 +112,7 @@ internal sealed class Leaf00000004 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Cache Level</b> field.
+    /// Gets a value representing the <strong>Cache Level</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -120,7 +121,7 @@ internal sealed class Leaf00000004 : LeafBase
     private byte CacheLevel => (byte)((InvokeResult.eax >> 5) & 0x07);
 
     /// <summary>
-    /// Gets a value representing the <b>Cache Size</b> field.
+    /// Gets a value representing the <strong>Cache Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -129,7 +130,7 @@ internal sealed class Leaf00000004 : LeafBase
     private uint CacheSize => (w + 1) * (p + 1) * (l + 1) * (s + 1);
 
     /// <summary>
-    /// Gets a value representing the <b>Cache Type</b> field.
+    /// Gets a value representing the <strong>Cache Type</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -138,7 +139,7 @@ internal sealed class Leaf00000004 : LeafBase
     private byte CacheType => (byte)(InvokeResult.eax & 0x1f);
 
     /// <summary>
-    /// Gets a value representing the <b>System Coherency Line Size</b> field.
+    /// Gets a value representing the <strong>System Coherency Line Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -147,7 +148,7 @@ internal sealed class Leaf00000004 : LeafBase
     private uint l => InvokeResult.ebx & 0xfff;
 
     /// <summary>
-    /// Gets a value representing the <b>Physical Line partitions</b> field.
+    /// Gets a value representing the <strong>Physical Line partitions</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -156,7 +157,7 @@ internal sealed class Leaf00000004 : LeafBase
     private uint p => (InvokeResult.ebx >> 12) & 0x3ff;
 
     /// <summary>
-    /// Gets a value representing the <b>Ways of associativity</b> field.
+    /// Gets a value representing the <strong>Ways of associativity</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -165,7 +166,7 @@ internal sealed class Leaf00000004 : LeafBase
     private uint w => (InvokeResult.ebx >> 22) & 0x3ff;
 
     /// <summary>
-    /// Gets a value representing the <b>Number of Sets</b> field.
+    /// Gets a value representing the <strong>Number of Sets</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -174,7 +175,7 @@ internal sealed class Leaf00000004 : LeafBase
     private uint s => InvokeResult.ecx;
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum Number Addressable Logical Processors</b> field.
+    /// Gets a value representing the <strong>Maximum Number Addressable Logical Processors</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -183,7 +184,7 @@ internal sealed class Leaf00000004 : LeafBase
     private byte MaximumLogicalProcessorCores => (byte)((InvokeResult.eax >> 14) & 0xfff);
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum Number Addressable Processor Cores Physical</b> field.
+    /// Gets a value representing the <strong>Maximum Number Addressable Processor Cores Physical</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -223,17 +224,17 @@ internal sealed class Leaf00000004 : LeafBase
     /// </summary>
     /// <param name="code">Value to analyze</param>
     /// <returns>
-    /// A <see cref="string"/> containing the cahe type.
+    /// A <see cref="string"/> containing the cache type.
     /// </returns>
     private static string GetCacheType(byte code)
     {
         string[] cacheType =
-        {
+        [
             "No more caches.",   // 00
             "Data Cache",
             "Instruction Cache", 
             "Unified Cache"      // 03
-        };
+        ];
 
         return code > 0x03 
             ? "Reserved" 

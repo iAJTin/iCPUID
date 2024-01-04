@@ -13,7 +13,7 @@ public static bool operator ==(CpuidLeafContent right, CpuidLeafContent left)
 
 ## Return Value
 
-Returns true if right is equal to left; false otherwise.
+Returns `true` if right is equal to left; otherwise `false`.
 
 ## See Also
 

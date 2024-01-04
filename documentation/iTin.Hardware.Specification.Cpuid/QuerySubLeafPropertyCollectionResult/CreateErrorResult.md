@@ -1,6 +1,6 @@
 # QuerySubLeafPropertyCollectionResult.CreateErrorResult method (1 of 4)
 
-Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors collection.
+Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors' collection.
 
 ```csharp
 public static QuerySubLeafPropertyCollectionResult CreateErrorResult(IResultError[] errors)
@@ -12,7 +12,7 @@ public static QuerySubLeafPropertyCollectionResult CreateErrorResult(IResultErro
 
 ## Return Value
 
-A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors collection.
+A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors' collection.
 
 ## See Also
 
@@ -23,7 +23,7 @@ A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCo
 
 # QuerySubLeafPropertyCollectionResult.CreateErrorResult method (2 of 4)
 
-Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors collection.
+Returns a new [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors' collection.
 
 ```csharp
 public static QuerySubLeafPropertyCollectionResult CreateErrorResult(IResultError[] errors, 
@@ -37,7 +37,7 @@ public static QuerySubLeafPropertyCollectionResult CreateErrorResult(IResultErro
 
 ## Return Value
 
-A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors collection.
+A new invalid [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) with specified detailed errors' collection.
 
 ## See Also
 

@@ -52,7 +52,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Architectural Performance Monitoring Features</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Architectural Performance Monitoring Features</strong>.
 /// </summary>
 internal sealed class Leaf0000000A : LeafBase
 {
@@ -79,7 +79,8 @@ internal sealed class Leaf0000000A : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf0000000A(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf0000000A(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main)
+        : base(data, subLeaf)
     {
     }
 
@@ -88,7 +89,7 @@ internal sealed class Leaf0000000A : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Version ID of architectural performance monitoring</b> field.
+    /// Gets a value representing the <strong>Version ID of architectural performance monitoring</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -97,7 +98,7 @@ internal sealed class Leaf0000000A : LeafBase
     private uint VersionId => InvokeResult.eax & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>Number of general-purpose performance monitoring counter per logical processor</b> field.
+    /// Gets a value representing the <strong>Number of general-purpose performance monitoring counter per logical processor</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -106,7 +107,7 @@ internal sealed class Leaf0000000A : LeafBase
     private uint NumberOfGeneralPurposeCounterPerLogicalProcessor => (InvokeResult.eax >> 0x08) & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>Bit width of general-purpose, performance monitoring counter</b> field.
+    /// Gets a value representing the <strong>Bit width of general-purpose, performance monitoring counter</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -115,7 +116,7 @@ internal sealed class Leaf0000000A : LeafBase
     private uint BitWidth => (InvokeResult.eax >> 0x10) & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>Length of EBX bit vector to enumerate architectural performance monitoring events</b> field.
+    /// Gets a value representing the <strong>Length of EBX bit vector to enumerate architectural performance monitoring events</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -124,7 +125,7 @@ internal sealed class Leaf0000000A : LeafBase
     private uint LenghtBitVector => (InvokeResult.eax >> 0x18) & 0xff;
 
     /// <summary>
-    /// Gets a value representing the <b>Number of fixed-function performance counters</b> field.
+    /// Gets a value representing the <strong>Number of fixed-function performance counters</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -133,7 +134,7 @@ internal sealed class Leaf0000000A : LeafBase
     private byte NumberFixFunctionsCounters => (byte)(InvokeResult.edx & 0xf);
 
     /// <summary>
-    /// Gets a value representing the <b>Bit width of fixed-function performance counters</b> field.
+    /// Gets a value representing the <strong>Bit width of fixed-function performance counters</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

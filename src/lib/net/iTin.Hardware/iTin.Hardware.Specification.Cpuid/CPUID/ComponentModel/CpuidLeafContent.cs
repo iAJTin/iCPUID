@@ -1,8 +1,5 @@
 ﻿
-using System.Collections.Generic;
-
 using iTin.Core.Hardware.CrossPlatform.Cpuid;
-
 using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
 
 namespace iTin.Hardware.Specification.Cpuid;
@@ -45,7 +42,7 @@ public readonly struct CpuidLeafContent
     {
         get
         {
-            IEnumerable<LeafBase> structures = CpuidLeafFactory.Create(this);
+            var structures = CpuidLeafFactory.Create(this);
             var collection = new CpuidSubLeafCollection(structures);
 
             return collection;
@@ -62,7 +59,7 @@ public readonly struct CpuidLeafContent
     /// <param name="right">The right leaf info.</param>
     /// <param name="left">The left leaf info.</param>
     /// <returns>
-    /// Returns <b>true</b> if <b>right</b> is equal to <b>left</b>; <b>false</b> otherwise.
+    /// Returns <see langword="true"/> if <strong>right</strong> is equal to <strong>left</strong>; otherwise <see langword="false"/>.
     /// </returns>
     public static bool operator ==(CpuidLeafContent right, CpuidLeafContent left) => right.Equals(left);
 
@@ -72,7 +69,7 @@ public readonly struct CpuidLeafContent
     /// <param name="right">The right leaf info.</param>
     /// <param name="left">The left leaf info.</param>
     /// <returns>
-    /// Returns <b>true</b> if <b>right</b> is not equal to <b>left</b>; <b>false</b> otherwise.
+    /// Returns <see langword="true"/> if <strong>right</strong> is not equal to <strong>left</strong>; otherwise <see langword="false"/>.
     /// </returns>
     public static bool operator !=(CpuidLeafContent right, CpuidLeafContent left) => !right.Equals(left);
 
@@ -85,7 +82,7 @@ public readonly struct CpuidLeafContent
     /// </summary>
     /// <param name="other">Object to be compared to this object.</param>
     /// <returns>
-    /// <b>true</b> if the current object is equal to the parameter <paramref name="other"/>; Otherwise, <b>false</b>.
+    /// <see langword="true"/> if the current object is equal to the parameter <paramref name="other"/>; Otherwise, <see langword="false"/>.
     /// </returns>
     public bool Equals(CpuidLeafContent other) => other.Equals((object)this);
 
@@ -94,10 +91,10 @@ public readonly struct CpuidLeafContent
     #region internal methods
 
     /// <summary>
-    /// Returns a value that contains the result of executes the <b>CPUID</b> instruction with given leaf and subleaf.
+    /// Returns a value that contains the result of executes the <b>CPUID</b> instruction with given leaf and sub-leaf.
     /// </summary>
     /// <returns>
-    /// A <see cref="CpuidResult"/> structure which contains the result of executes the <b>CPUID</b> instruction with given leaf and subleaf.
+    /// A <see cref="CpuidResult"/> structure which contains the result of executes the <b>CPUID</b> instruction with given leaf and sub-leaf.
     /// </returns>
     internal CpuidResult Invoke(SubLeaf subLeaf = SubLeaf.Main) => SafeCpuidNativeMethods.Invoke((uint)Leaf, (uint)subLeaf);
 
@@ -105,21 +102,10 @@ public readonly struct CpuidLeafContent
 
     #region public override methods
 
-    /// <summary>
-    /// Returns a hash code for this instance.
-    /// </summary>
-    /// <returns>
-    /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-    /// </returns>
+    /// <inheritdoc/>
     public override int GetHashCode() => Leaf.GetHashCode();
 
-    /// <summary>
-    /// Determines whether the specified <see cref="object"/> is equal to this instance.
-    /// </summary>
-    /// <param name="obj">Another object with which the comparison is to be made.</param>
-    /// <returns>
-    /// <b>true</b> if the specified <see cref="object"/> is equal to this instance; otherwise, <b>false</b>.
-    /// </returns>
+    /// <inheritdoc/>
     public override bool Equals(object obj)
     {
         if (obj is not CpuidLeafContent other)
@@ -130,12 +116,7 @@ public readonly struct CpuidLeafContent
         return other.Leaf == Leaf;
     }
 
-    /// <summary>
-    /// Returns a <see cref="string"/> that represents this instance.
-    /// </summary>
-    /// <returns>
-    /// A <see cref="string"/> that represents this instance.
-    /// </returns>
+    /// <inheritdoc/>
     public override string ToString() => $"Leaf={Leaf}, SubLeafs={SubLeafs.Count}";
 
     #endregion

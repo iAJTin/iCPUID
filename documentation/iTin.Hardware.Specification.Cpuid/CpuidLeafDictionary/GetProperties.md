@@ -12,7 +12,7 @@ public QuerySubLeafPropertyCollectionResult GetProperties(IPropertyKey propertyK
 
 ## Return Value
 
-A [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) reference that contains the result of the operation, to check if the operation is correct, the Success property will be true and the Value property will contain the value; Otherwise, the the Success property will be false and the Errors property will contain the errors associated with the operation, if they have been filled in.
+A [`QuerySubLeafPropertyCollectionResult`](../QuerySubLeafPropertyCollectionResult.md) reference that contains the result of the operation, to check if the operation is correct, the Success property will be `true` and the Value property will contain the value; otherwise, the Success property will be false and the Errors property will contain the errors associated with the operation, if they have been filled in.
 
 The type of the Value property is [`CpuidSubLeafDictionary`](../CpuidSubLeafDictionary.md). Contains the result of the operation.
 

@@ -36,7 +36,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Virtual and Physical address Sizes</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Virtual and Physical address Sizes</strong>.
 /// </summary>
 internal sealed class Leaf80000008 : LeafBase
 {
@@ -47,7 +47,8 @@ internal sealed class Leaf80000008 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000008(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000008(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main)
+        : base(data, subLeaf)
     {
     }
 
@@ -56,7 +57,7 @@ internal sealed class Leaf80000008 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Physical Address Size</b> field.
+    /// Gets a value representing the <strong>Physical Address Size</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -65,7 +66,7 @@ internal sealed class Leaf80000008 : LeafBase
     private byte PhysicalAddressSize => InvokeResult.eax.GetByte(Bytes.Byte00);
 
     /// <summary>
-    /// Gets a value representing the <b>Linear Address Bits</b> field.
+    /// Gets a value representing the <strong>Linear Address Bits</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

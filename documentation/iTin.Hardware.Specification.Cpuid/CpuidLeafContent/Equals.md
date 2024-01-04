@@ -12,7 +12,7 @@ public bool Equals(CpuidLeafContent other)
 
 ## Return Value
 
-true if the current object is equal to the parameter *other*; Otherwise, false.
+`true` if the current object is equal to the parameter *other*; Otherwise, `false`.
 
 ## See Also
 
@@ -23,19 +23,9 @@ true if the current object is equal to the parameter *other*; Otherwise, false.
 
 # CpuidLeafContent.Equals method (2 of 2)
 
-Determines whether the specified Object is equal to this instance.
-
 ```csharp
 public override bool Equals(object obj)
 ```
-
-| parameter | description |
-| --- | --- |
-| obj | Another object with which the comparison is to be made. |
-
-## Return Value
-
-true if the specified Object is equal to this instance; otherwise, false.
 
 ## See Also
 

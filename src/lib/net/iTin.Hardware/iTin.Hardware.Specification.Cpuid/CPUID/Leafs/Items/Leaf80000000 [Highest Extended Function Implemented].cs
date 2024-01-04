@@ -28,7 +28,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Highest Extended Function Implemented</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Highest Extended Function Implemented</strong>.
 /// </summary>
 internal sealed class Leaf80000000 : LeafBase
 {
@@ -39,7 +39,8 @@ internal sealed class Leaf80000000 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000000(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000000(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -48,7 +49,7 @@ internal sealed class Leaf80000000 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum Input Value for Extended Function CPUID Information</b> field.
+    /// Gets a value representing the <strong>Maximum Input Value for Extended Function CPUID Information</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

@@ -72,5 +72,5 @@ public enum SubLeaf : uint
     /// Ten sub-leaf
     /// </summary>
     [EnumDescription("10")]
-    Ten,
+    Ten
 }

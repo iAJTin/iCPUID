@@ -53,7 +53,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Processor Frequency Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Processor Frequency Information</strong>.
 /// </summary>
 internal sealed class Leaf00000016 : LeafBase
 {
@@ -64,7 +64,8 @@ internal sealed class Leaf00000016 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000016(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000016(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -73,7 +74,7 @@ internal sealed class Leaf00000016 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Processor Base Frequency</b> field.
+    /// Gets a value representing the <strong>Processor Base Frequency</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -82,7 +83,7 @@ internal sealed class Leaf00000016 : LeafBase
     private uint ProcessorBaseFrequency => InvokeResult.eax & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum Frequency</b> field.
+    /// Gets a value representing the <strong>Maximum Frequency</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -91,7 +92,7 @@ internal sealed class Leaf00000016 : LeafBase
     private uint MaximumFrequency => InvokeResult.ebx & 0xffff;
 
     /// <summary>
-    /// Gets a value representing the <b>Bus Reference Frequency</b> field.
+    /// Gets a value representing the <strong>Bus Reference Frequency</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

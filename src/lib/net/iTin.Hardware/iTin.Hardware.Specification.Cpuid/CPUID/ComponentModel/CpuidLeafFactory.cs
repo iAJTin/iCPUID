@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using iTin.Core;
 using iTin.Core.Hardware.CrossPlatform.Cpuid;
 using iTin.Core.Helpers.Enumerations;
-using iTin.Core.Interop.CrossPlatform.Development.Hardware.uProcessor.CPUID;
 
 namespace iTin.Hardware.Specification.Cpuid;
 
@@ -23,8 +22,8 @@ internal static class CpuidLeafFactory
     public static IEnumerable<LeafBase> Create(CpuidLeafContent data)
     {
         var parseProperties = new List<LeafBase>();
-        var subleafsNumber = DetermineSubLeafs(data.Leaf);
-        for (var i = 1; i <= subleafsNumber; i++)
+        var subLeafsNumber = DetermineSubLeafs(data.Leaf);
+        for (var i = 1; i <= subLeafsNumber; i++)
         {
             var subLeaf = (SubLeaf)(i - 1);
             switch (data.Leaf)
@@ -169,7 +168,7 @@ internal static class CpuidLeafFactory
                 uint subLeaf = 0;
                 while (true)
                 {
-                    CpuidResult result = SafeCpuidNativeMethods.Invoke((uint) leaf, subLeaf);
+                    var result = SafeCpuidNativeMethods.Invoke((uint) leaf, subLeaf);
                     if (result.IsEmpty)
                     {
                         break;
@@ -186,8 +185,8 @@ internal static class CpuidLeafFactory
                 uint subLeaf = 0;
                 while (true)
                 {
-                    CpuidResult result = SafeCpuidNativeMethods.Invoke((uint)leaf, subLeaf);
-                    if (result.eax == 0 && result.ebx == 0)
+                    var result = SafeCpuidNativeMethods.Invoke((uint)leaf, subLeaf);
+                    if (result is { eax: 0, ebx: 0 })
                     {
                         break;
                     }
@@ -200,14 +199,14 @@ internal static class CpuidLeafFactory
 
             case Leaf.ResourceDirectorTechnologyMonitoring:
             {
-                CpuidResult result = SafeCpuidNativeMethods.Invoke((uint)leaf);
+                var result = SafeCpuidNativeMethods.Invoke((uint)leaf);
                 return result.edx.CheckBit(Bits.Bit01) ? (uint) 2 : (uint) 1;
             }
 
             case Leaf.ResourceDirectorTechnologyAllocation:
             {
                 uint resId = 1;
-                CpuidResult result = SafeCpuidNativeMethods.Invoke((uint)leaf);
+                var result = SafeCpuidNativeMethods.Invoke((uint)leaf);
 
                 var supportL3CacheAllocation = result.ebx.CheckBit(Bits.Bit01);
                 if (supportL3CacheAllocation)
@@ -231,15 +230,15 @@ internal static class CpuidLeafFactory
             case Leaf.Sgx:
             {
                 uint subLeaf = 1;
-                CpuidResult result = SafeCpuidNativeMethods.Invoke((uint)leaf);
-                var supportSGX1 = result.eax.CheckBit(Bits.Bit00);
-                if (supportSGX1)
+                var result = SafeCpuidNativeMethods.Invoke((uint)leaf);
+                var supportSgx1 = result.eax.CheckBit(Bits.Bit00);
+                if (supportSgx1)
                 {
                     subLeaf++;
                 }
 
-                var supportSGX2 = result.eax.CheckBit(Bits.Bit01);
-                if (supportSGX2)
+                var supportSgx2 = result.eax.CheckBit(Bits.Bit01);
+                if (supportSgx2)
                 {
                     subLeaf++;
                 }

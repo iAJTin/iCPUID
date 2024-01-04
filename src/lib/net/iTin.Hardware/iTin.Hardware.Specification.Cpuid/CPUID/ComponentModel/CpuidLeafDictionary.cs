@@ -17,12 +17,12 @@ public sealed class CpuidLeafDictionary : Dictionary<Leaf, CpuidSubLeafCollectio
     /// <param name="propertyKey">Key to the property to obtain</param>
     /// <returns>
     /// <para>
-    /// A <see cref="QueryPropertyResult"/> reference that contains the result of the operation, to check if the operation is correct, the <b>Success</b>
-    /// property will be <b>true</b> and the <b>Value</b> property will contain the value; Otherwise, the the <b>Success</b> property
-    /// will be false and the <b>Errors</b> property will contain the errors associated with the operation, if they have been filled in.
+    /// A <see cref="QueryPropertyResult"/> reference that contains the result of the operation, to check if the operation is correct, the <strong>Success</strong>
+    /// property will be <see langword="true"/> and the <strong>Value</strong> property will contain the value; otherwise, the <strong>Success</strong> property
+    /// will be false and the <strong>Errors</strong> property will contain the errors associated with the operation, if they have been filled in.
     /// </para>
     /// <para>
-    /// The type of the <b>Value</b> property is <see cref="PropertyItem"/>.
+    /// The type of the <strong>Value</strong> property is <see cref="PropertyItem"/>.
     /// </para>
     /// <para>
     /// </para>
@@ -32,19 +32,19 @@ public sealed class CpuidLeafDictionary : Dictionary<Leaf, CpuidSubLeafCollectio
         var propertyId = propertyKey.StructureId;
         var subLeafs = this[(Leaf)propertyId];
 
-        bool hasItems = subLeafs.Any();
+        var hasItems = subLeafs.Any();
         if (!hasItems)
         {
-            return QueryPropertyResult.CreateErroResult("Can not found specified property key");
+            return QueryPropertyResult.CreateErrorResult("Can not found specified property key");
         }
 
-        bool onlyOneItem = subLeafs.Count == 1;
+        var onlyOneItem = subLeafs.Count == 1;
         if (onlyOneItem)
         {
             return subLeafs.FirstOrDefault()?.GetProperty(propertyKey);
         }
 
-        return QueryPropertyResult.CreateErroResult("Can not found specified property key");
+        return QueryPropertyResult.CreateErrorResult("Can not found specified property key");
     }
 
     /// <summary>
@@ -53,9 +53,9 @@ public sealed class CpuidLeafDictionary : Dictionary<Leaf, CpuidSubLeafCollectio
     /// <param name="propertyKey">Key to the property to obtain</param>
     /// <returns>
     /// <para>
-    /// A <see cref="QuerySubLeafPropertyCollectionResult"/> reference that contains the result of the operation, to check if the operation is correct, the <b>Success</b>
-    /// property will be <b>true</b> and the <b>Value</b> property will contain the value; Otherwise, the the <b>Success</b> property
-    /// will be false and the <b>Errors</b> property will contain the errors associated with the operation, if they have been filled in.
+    /// A <see cref="QuerySubLeafPropertyCollectionResult"/> reference that contains the result of the operation, to check if the operation is correct, the <strong>Success</strong>
+    /// property will be <see langword="true"/> and the <strong>Value</strong> property will contain the value; otherwise, the <strong>Success</strong> property
+    /// will be false and the <strong>Errors</strong> property will contain the errors associated with the operation, if they have been filled in.
     /// </para>
     /// <para>
     /// The type of the <b>Value</b> property is <see cref="CpuidSubLeafDictionary"/>. Contains the result of the operation.
@@ -73,7 +73,7 @@ public sealed class CpuidLeafDictionary : Dictionary<Leaf, CpuidSubLeafCollectio
             return QuerySubLeafPropertyCollectionResult.CreateErrorResult("Can not found specified property key");
         }
 
-        int i = 0;
+        var i = 0;
         foreach (var subLeaf in subLeafs)
         {
             properties.Add((SubLeaf)i, subLeaf.GetProperty(propertyKey).Result);

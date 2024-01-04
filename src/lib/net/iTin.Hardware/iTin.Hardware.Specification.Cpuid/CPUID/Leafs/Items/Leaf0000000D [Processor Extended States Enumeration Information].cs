@@ -125,7 +125,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Processor Extended States Enumeration Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Processor Extended States Enumeration Information</strong>.
 /// </summary>
 internal sealed class Leaf0000000D : LeafBase
 {
@@ -188,7 +188,8 @@ internal sealed class Leaf0000000D : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf0000000D(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf0000000D(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -197,7 +198,7 @@ internal sealed class Leaf0000000D : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>MPX State</b> field.
+    /// Gets a value representing the <strong>MPX State</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -206,7 +207,7 @@ internal sealed class Leaf0000000D : LeafBase
     private byte MPXState => (byte)(InvokeResult.eax >> 3 & 0x03);
 
     /// <summary>
-    /// Gets a value representing the <b>AVX-512 state</b> field.
+    /// Gets a value representing the <strong>AVX-512 state</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -215,7 +216,7 @@ internal sealed class Leaf0000000D : LeafBase
     private byte AVX512State => (byte)(InvokeResult.eax >> 5 & 0x03);
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum size enabled features XCRO</b> field.
+    /// Gets a value representing the <strong>Maximum size enabled features XCRO</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -224,7 +225,7 @@ internal sealed class Leaf0000000D : LeafBase
     private uint MaximumSizeEnabledFeaturesXCR0 => InvokeResult.ebx;
 
     /// <summary>
-    /// Gets a value representing the <b>Maximum size all supported features</b> field.
+    /// Gets a value representing the <strong>Maximum size all supported features</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -233,7 +234,7 @@ internal sealed class Leaf0000000D : LeafBase
     private uint MaximumSizeAllSupportedFeatures => InvokeResult.ecx;
 
     /// <summary>
-    /// Gets a value representing the <b>Size all states enabled</b> field.
+    /// Gets a value representing the <strong>Size all states enabled</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -242,7 +243,7 @@ internal sealed class Leaf0000000D : LeafBase
     private uint SizeAllStatesEnabled => InvokeResult.ebx;
 
     /// <summary>
-    /// Gets a value representing the <b>Lower 32 Bits IA32_XSS</b> field.
+    /// Gets a value representing the <strong>Lower 32 Bits IA32_XSS</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -251,7 +252,7 @@ internal sealed class Leaf0000000D : LeafBase
     private uint Lower32Bits_IA32_XSS => InvokeResult.ecx;
 
     /// <summary>
-    /// Gets a value representing the <b>Upper 32 Bits IA32_XSS</b> field.
+    /// Gets a value representing the <strong>Upper 32 Bits IA32_XSS</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -260,7 +261,7 @@ internal sealed class Leaf0000000D : LeafBase
     private uint Upper32Bits_IA32_XSS => InvokeResult.edx;
 
     /// <summary>
-    /// Gets a value representing the <b>Size Save Area Extended State Feature</b> field.
+    /// Gets a value representing the <strong>Size Save Area Extended State Feature</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -269,7 +270,7 @@ internal sealed class Leaf0000000D : LeafBase
     private uint SizeSaveAreaExtendedStateFeature => InvokeResult.eax;
 
     /// <summary>
-    /// Gets a value representing the <b>Offset This Extennded State Component</b> field.
+    /// Gets a value representing the <strong>Offset This Extennded State Component</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

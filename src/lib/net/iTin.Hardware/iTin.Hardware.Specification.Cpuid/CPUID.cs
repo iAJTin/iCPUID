@@ -20,8 +20,6 @@ namespace iTin.Hardware.Specification;
 public sealed class CPUID
 {
     #region private readonly members
-    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    private string _processorName;
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private Leaf _validHighestLeafBasic;
@@ -58,7 +56,7 @@ public sealed class CPUID
     /// Gets a unique instance of this class.
     /// </summary>
     /// <value>
-    /// A unique <see cref="CPUID"/> reference that contains <b>CPUID</b> information.
+    /// A unique <see cref="CPUID"/> reference that contains <strong>CPUID</strong> information.
     /// </value>
     public static readonly CPUID Instance = new();
 
@@ -75,15 +73,15 @@ public sealed class CPUID
     public ReadOnlyCollection<Leaf> ImplementedLeafs => _leafTable.Keys.ToList().AsReadOnly();
 
     /// <summary>
-    /// Gets a value that indicates whether the <b>CPUID</b> instruction is available for this system.
+    /// Gets a value that indicates whether the <strong>CPUID</strong> instruction is available for this system.
     /// </summary>
     /// <value>
-    /// <b>true</b> if the <b>CPUID</b> instruction is available for this system; Otherwise, <b>false</b>.
+    /// <strong>true</strong> if the <strong>CPUID</strong> instruction is available for this system; Otherwise, <strong>false</strong>.
     /// </value>
     public bool IsAvailable { get; }
 
     /// <summary>
-    /// Gets a value that indicates whether the <b>CPUID</b> instruction is available for this system.
+    /// Gets a value that indicates whether the <strong>CPUID</strong> instruction is available for this system.
     /// </summary>
     /// <value>
     /// A <see cref="string"/> that contains the current processor name.
@@ -105,12 +103,12 @@ public sealed class CPUID
     }
 
     /// <summary>
-    /// Gets a value that indicates whether the <b>CPUID</b> instruction is available for this system.
+    /// Gets a value that indicates whether the <strong>CPUID</strong> instruction is available for this system.
     /// </summary>
     /// <value>
     /// A <see cref="string"/> that contains the current processor name.
     /// </value>
-    public string ProcessorName => _processorName;
+    public string ProcessorName { get; private set; }
 
     #endregion
         
@@ -149,7 +147,7 @@ public sealed class CPUID
             _leafTable.Add(currentLeaf, currentLeafInfo);
         }
 
-        for (uint leaf = (uint)Leaf.HighestExtendedFunctionImplemented; leaf < (uint)_validHighestLeafExtended; leaf++)
+        for (var leaf = (uint)Leaf.HighestExtendedFunctionImplemented; leaf < (uint)_validHighestLeafExtended; leaf++)
         {
             var validLeaf = Enum.IsDefined(typeof(Leaf), leaf);
             if (!validLeaf)
@@ -179,7 +177,7 @@ public sealed class CPUID
         var brandString2Result = SafeCpuidNativeMethods.Invoke((uint)Leaf.ProcessorBrandString2);
         builder.Append($"{LogicHelper.Word2Str((int)brandString2Result.eax)}{LogicHelper.Word2Str((int)brandString2Result.ebx)}{LogicHelper.Word2Str((int)brandString2Result.ecx)}{LogicHelper.Word2Str((int)brandString2Result.edx)}");
 
-        _processorName = builder.ToString().Trim('\0');
+        ProcessorName = builder.ToString().Trim('\0');
     }
 
     #endregion

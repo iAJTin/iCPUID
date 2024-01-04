@@ -112,7 +112,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Intel Resource Director Technology (Intel RDT) Allocation Enumeration Information</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Intel Resource Director Technology (Intel RDT) Allocation Enumeration Information</strong>.
 /// </summary>
 internal sealed class Leaf00000010 : LeafBase
 {
@@ -149,7 +149,8 @@ internal sealed class Leaf00000010 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf00000010(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf00000010(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -158,7 +159,7 @@ internal sealed class Leaf00000010 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Length Bit Mask</b> field.
+    /// Gets a value representing the <strong>Length Bit Mask</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -167,7 +168,7 @@ internal sealed class Leaf00000010 : LeafBase
     private uint LengthBitMask => InvokeResult.eax & 0x1f;
 
     /// <summary>
-    /// Gets a value representing the <b>Bit Granular Map</b> field.
+    /// Gets a value representing the <strong>Bit Granular Map</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
@@ -176,7 +177,7 @@ internal sealed class Leaf00000010 : LeafBase
     private uint BitGranularMap => InvokeResult.ebx;
 
     /// <summary>
-    /// Gets a value representing the <b>Highest COS</b> field.
+    /// Gets a value representing the <strong>Highest COS</strong> field.
     /// </summary>
     /// <value>
     /// Property value.

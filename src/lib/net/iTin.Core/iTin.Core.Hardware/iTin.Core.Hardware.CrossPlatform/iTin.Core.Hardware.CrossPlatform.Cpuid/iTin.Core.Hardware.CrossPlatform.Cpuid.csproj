@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>iTin.Core.Hardware.CrossPlatform.Cpuid</AssemblyName>
     <PackageId>iTin.Core.Hardware.CrossPlatform.Cpuid</PackageId>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <Authors>iTin</Authors>
     <Company>iTin</Company>
     <Product>iTin.Core.Hardware.CrossPlatform.Cpuid</Product>

@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>iTin.Core.Interop.CrossPlatform.Cpuid</AssemblyName>
     <PackageId>iTin.Core.Interop.CrossPlatform.Cpuid</PackageId>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <Authors>iTin</Authors>
     <Company>iTin</Company>
     <Product>iTin.Core.Interop.CrossPlatform.Cpuid</Product>
@@ -42,7 +42,7 @@
   </Target>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\iTin\iTin.Core\iTin.Core.Interop.Shared\src\iTin.Core.Interop.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\iTin\iTin.Core\iTin.Core.Interop\iTin.Core.Interop.Shared\src\iTin.Core.Interop.Shared.csproj" />
   </ItemGroup>
 
 </Project>

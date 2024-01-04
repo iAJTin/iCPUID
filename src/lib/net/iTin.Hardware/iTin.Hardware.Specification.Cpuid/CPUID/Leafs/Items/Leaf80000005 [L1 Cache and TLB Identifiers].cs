@@ -28,7 +28,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>L1 Cache and TLB Identifiers</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>L1 Cache and TLB Identifiers</strong>.
 /// </summary>
 internal sealed class Leaf80000005 : LeafBase
 {
@@ -39,7 +39,8 @@ internal sealed class Leaf80000005 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000005(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000005(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -48,7 +49,7 @@ internal sealed class Leaf80000005 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value that indicates if the <b>CPUID</b> call is valid.
+    /// Gets a value that indicates if the <strong>CPUID</strong> call is valid.
     /// </summary>
     /// <value>
     /// Property value.

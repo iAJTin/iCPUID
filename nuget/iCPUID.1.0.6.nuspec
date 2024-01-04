@@ -13,7 +13,7 @@
     <iconUrl>https://raw.githubusercontent.com/iAJTin/iCPUID/master/nuget/iCPUID.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>iCPUID is a lightweight cross-platform implementation that allows us to obtain the CPUID information. Works on Windows, Mac and Linux</description>
-    <copyright>Copyright © 2022 iAJTin</copyright>
+    <copyright>Copyright © 2024 iAJTin</copyright>
     <tags>CPUID CPU hardware iTin</tags>
     <repository type="git" url="https://github.com/iAJTin/iCPUID" commit="960c30a26b48edc875a6e10e252925cd423ae2f3" />
     <dependencies>

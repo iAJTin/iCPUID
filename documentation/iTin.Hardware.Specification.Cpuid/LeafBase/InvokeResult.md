@@ -1,6 +1,6 @@
 # LeafBase.InvokeResult property
 
-Gets or sets the result of executes the CPUID instruction with given leaf and optional subleaf.
+Gets or sets the result of executes the CPUID instruction with given leaf and optional sub-leaf.
 
 ```csharp
 protected CpuidResult InvokeResult { get; set; }
@@ -8,7 +8,7 @@ protected CpuidResult InvokeResult { get; set; }
 
 ## Property Value
 
-A CpuidResult structure which contains the result of executes the CPUID instruction with given leaf and optional subleaf.
+A CpuidResult structure which contains the result of executes the CPUID instruction with given leaf and optional sub-leaf.
 
 ## See Also
 

@@ -28,7 +28,7 @@ namespace iTin.Hardware.Specification.Cpuid;
 // •———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————•
 
 /// <summary>
-/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <b>Processor Brand String Continued</b>.
+/// Specialization of the <see cref="LeafBase"/> class that contains the logic to decode the <strong>Processor Brand String Continued</strong>.
 /// </summary>
 internal sealed class Leaf80000003 : LeafBase
 {
@@ -39,7 +39,8 @@ internal sealed class Leaf80000003 : LeafBase
     /// </summary>
     /// <param name="data">Current leaf information.</param>
     /// <param name="subLeaf">Current sub-leaf information.</param>
-    public Leaf80000003(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) : base(data, subLeaf)
+    public Leaf80000003(CpuidLeafContent data, SubLeaf subLeaf = SubLeaf.Main) 
+        : base(data, subLeaf)
     {
     }
 
@@ -48,7 +49,7 @@ internal sealed class Leaf80000003 : LeafBase
     #region private readonly properties
 
     /// <summary>
-    /// Gets a value representing the <b>Processor Brand String</b> field.
+    /// Gets a value representing the <strong>Processor Brand String</strong> field.
     /// </summary>
     /// <value>
     /// Property value.
