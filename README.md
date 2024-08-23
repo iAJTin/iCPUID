@@ -73,7 +73,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
 2. Gets and prints all **CPUID** implemented leafs.
 
        CPUID cpuid = CPUID.Instance;
-       ReadOnlyCollection<Leaf> leafs = cpuid.ImplementedLeafs;
+       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
        foreach (Leaf leaf in leafs)
        {
            Console.WriteLine($@" {(int)leaf:X8}-{leaf}");
@@ -82,7 +82,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
 3. Gets and prints all **CPUID** implemented leafs > sub-leafs.
 
        CPUID cpuid = CPUID.Instance;
-       ReadOnlyCollection<Leaf> leafs = cpuid.ImplementedLeafs;
+       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
        foreach (var (leaf, subLeafs) in leafs)
        {
            Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
@@ -96,7 +96,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
 4. Gets and prints all **CPUID** implemented leafs > sub-leafs (shows description).
 
        CPUID cpuid = CPUID.Instance;
-       ReadOnlyCollection<Leaf> leafs = cpuid.ImplementedLeafs;
+       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
        foreach (var (leaf, subLeafs) in leafs)
        {
            Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
@@ -119,7 +119,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
 5. Gets and prints all **CPUID** implemented leafs > sub-leafs (values).
 
        CPUID cpuid = CPUID.Instance;
-       ReadOnlyCollection<Leaf> leafs = cpuid.ImplementedLeafs;
+       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
        foreach (var (leaf, subLeafs) in leafs)
        {
            Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
