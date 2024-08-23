@@ -82,7 +82,23 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
 3. Gets and prints all **CPUID** implemented leafs > sub-leafs.
 
        CPUID cpuid = CPUID.Instance;
-       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
+       CpuidLeafDictionary? leafs = cpuid.Leafs;
+       foreach (var (leaf, subLeafs) in leafs)
+       {
+           Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
+
+           foreach (var subLeaf in subLeafs)
+           {
+               Console.WriteLine($@"   > {subLeaf.SubLeaf} ");
+           }
+        
+            Console.WriteLine();
+        }
+
+5. Gets and prints all **CPUID** implemented leafs > sub-leafs (shows description).
+
+       CPUID cpuid = CPUID.Instance;
+       CpuidLeafDictionary? leafs = cpuid.Leafs;
        foreach (var (leaf, subLeafs) in leafs)
        {
            Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
@@ -91,58 +107,37 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
            {
                Console.WriteLine($@"   > {subLeaf.SubLeaf} (ECX={(int)subLeaf.SubLeaf:X8})");
            }
+
+           Console.WriteLine();
        }
 
-4. Gets and prints all **CPUID** implemented leafs > sub-leafs (shows description).
+7. Gets and prints all **CPUID** implemented leafs > sub-leafs (values).
 
        CPUID cpuid = CPUID.Instance;
-       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
+       CpuidLeafDictionary? leafs = cpuid.Leafs;
        foreach (var (leaf, subLeafs) in leafs)
        {
            Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
-
+  
            foreach (var subLeaf in subLeafs)
            {
                Console.WriteLine($@"   > {subLeaf.SubLeaf} (ECX={(int)subLeaf.SubLeaf:X8})");
                IEnumerable<IPropertyKey> properties = subLeaf.ImplementedProperties;
-               foreach (var property in properties)
-               {
-                   string friendlyName = GetFriendlyName(property);
-                   PropertyUnit unit = property.PropertyUnit;
-                   string description = property.GetPropertyDescription();
-
-                   Console.WriteLine($@"     > {friendlyName} {(unit == PropertyUnit.None ? string.Empty : $"({unit})")}: {description}");
-               }
-           }
-       }
-
-5. Gets and prints all **CPUID** implemented leafs > sub-leafs (values).
-
-       CPUID cpuid = CPUID.Instance;
-       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
-       foreach (var (leaf, subLeafs) in leafs)
-       {
-           Console.WriteLine($@" > {leaf} (EAX={(int)leaf:X8})");
-
-           foreach (var subLeaf in subLeafs)
-           {
-               Console.WriteLine($@"   > {subLeaf.SubLeaf} (ECX={(int)subLeaf.SubLeaf:X8})");
-               IEnumerable<IPropertyKey> properties = subLeaf.ImplementedProperties;
-               foreach (var property in properties)
+               foreach (IPropertyKey property in properties)
                {
                    QueryPropertyResult queryResult = subLeaf.GetProperty(property);
-                   PropertyItem propertyItem = queryResult.Value;
+                   PropertyItem propertyItem = queryResult.Result;
                    object value = propertyItem.Value;
-                   string friendlyName = GetFriendlyName(property);
                    PropertyUnit valueUnit = property.PropertyUnit;
+                   string friendlyName = property.GetPropertyName();
                    string unit = valueUnit == PropertyUnit.None ? string.Empty : valueUnit.ToString();
-
+  
                    if (value == null)
                    {
                        Console.WriteLine($@"     > {friendlyName}: NULL");
                        continue;
                    }
-
+  
                    if (value is bool)
                    {
                        Console.WriteLine($@"     > {friendlyName}: {value} [{((bool)value ? 1 : 0)}]");
@@ -153,7 +148,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
                    }
                    else if (value is byte)
                    {
-                       Console.WriteLine($@"     > {friendlyName}: {value} {unit} [{value:X2}h]");
+                        Console.WriteLine($@"     > {friendlyName}: {value} {unit} [{value:X2}h]");
                    }
                    else if (value is int)
                    {
@@ -182,43 +177,47 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
                    }
                }
            }
-       }
+  
+            Console.WriteLine();
+        }
 
-6. Gets a **single property** directly.
 
-       CPUID cpuid = CPUID.Instance;
-       QueryPropertyResult manufacturerQueryResult = cpuid.Leafs.GetProperty(LeafProperty.BasicInformation.Manufacturer);
-       if (manufacturerQueryResult.Success)
-       {
-           Console.WriteLine($@" > Manufacturer: {manufacturerQueryResult.Value.Value}");
-       }
+8. Gets a **single property** directly.
 
-       QueryPropertyResult avx2 = cpuid.Leafs.GetProperty(LeafProperty.ExtendedFeatures.AVX2);
-       if (avx2.Success)
-       {
-           Console.WriteLine($@" > AVX2: {avx2.Value.Value}");
-       }
+        CPUID cpuid = CPUID.Instance;
+        QueryPropertyResult manufacturerQueryResult = cpuid.Leafs.GetProperty(LeafProperty.BasicInformation.Manufacturer);
+        if (manufacturerQueryResult.Success)
+        {
+            Console.WriteLine($" > Manufacturer: {manufacturerQueryResult.Result.Value}");
+        }
 
-7. Gets a property in **multiple** elements directly.
+        QueryPropertyResult avx2 = cpuid.Leafs.GetProperty(LeafProperty.ExtendedFeatures.AVX2);
+        if (avx2.Success)
+        {
+            Console.WriteLine($" > AVX2: {avx2.Result.Value}");
+        }
 
-       CPUID cpuid = CPUID.Instance;
-       QuerySubLeafPropertyCollectionResult cacheSizesQueryResult = leafs.GetProperties(LeafProperty.DeterministicCacheParameters.CacheSize);
-       if (cacheSizesQueryResult.Success)
-       {
-           CpuidSubLeafDictionary cacheSizes = cacheSizesQueryResult.Value;
-           bool hasCacheSizesEntries = cacheSizes.Any();
-           if (!hasCacheSizesEntries)
-           {
-               Console.WriteLine($@" > Sorry, The 'LeafProperty.DeterministicCacheParameters.CacheSize' property has not implementes on this system");
-           }
-           else
-           {
-               foreach (var (subLeaf, propertyItem) in cacheSizes)
-               {
-                   Console.WriteLine($@" > Cache Size:  ({subLeaf}) > {propertyItem.Value}");
-               }
-           }
-       }
+9. Gets a property in **multiple** elements directly.
+
+         CPUID cpuid = CPUID.Instance;
+         CpuidLeafDictionary? leafs = cpuid.Leafs;
+         QuerySubLeafPropertyCollectionResult cacheSizesQueryResult = leafs.GetProperties(LeafProperty.DeterministicCacheParameters.CacheSize);
+         if (cacheSizesQueryResult.Success)
+         {
+             CpuidSubLeafDictionary cacheSizes = cacheSizesQueryResult.Result;
+             bool hasCacheSizesEntries = cacheSizes.Any();
+             if (!hasCacheSizesEntries)
+             {
+                 Console.WriteLine($@" > Sorry, The 'LeafProperty.DeterministicCacheParameters.CacheSize' property has not implementes on this system");
+             }
+             else
+             {
+                 foreach (var (subLeaf, propertyItem) in cacheSizes)
+                 {
+                     Console.WriteLine($@" > Cache Size:  ({subLeaf}) > {propertyItem.Value} {propertyItem.Key.PropertyUnit}");
+                 }
+             }
+         }
 
 # Documentation
 
