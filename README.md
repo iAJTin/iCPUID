@@ -73,7 +73,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
 2. Gets and prints all **CPUID** implemented leafs.
 
        CPUID cpuid = CPUID.Instance;
-       CpuidLeafDictionary? leafs = cpuid.ImplementedLeafs;
+       ReadOnlyCollection<Leaf> leafs = cpuid.ImplementedLeafs;
        foreach (Leaf leaf in leafs)
        {
            Console.WriteLine($@" {(int)leaf:X8}-{leaf}");
