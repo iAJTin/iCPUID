@@ -79,7 +79,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
            Console.WriteLine($@" {(int)leaf:X8}-{leaf}");
        }
 
-3. Gets and prints all **CPUID** implemented leafs > sub-leafs.
+3. Gets and prints all **CPUID** leafs > sub-leafs.
 
        CPUID cpuid = CPUID.Instance;
        CpuidLeafDictionary? leafs = cpuid.Leafs;
@@ -95,7 +95,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
             Console.WriteLine();
         }
 
-5. Gets and prints all **CPUID** implemented leafs > sub-leafs (shows description).
+5. Gets and prints all **CPUID** leafs > sub-leafs (shows description).
 
        CPUID cpuid = CPUID.Instance;
        CpuidLeafDictionary? leafs = cpuid.Leafs;
@@ -111,7 +111,7 @@ Call **CPUID.Instance.Leafs** for getting all CPUID implemented leafs.
            Console.WriteLine();
        }
 
-7. Gets and prints all **CPUID** implemented leafs > sub-leafs (values).
+7. Gets and prints all **CPUID** leafs > sub-leafs (values).
 
        CPUID cpuid = CPUID.Instance;
        CpuidLeafDictionary? leafs = cpuid.Leafs;
